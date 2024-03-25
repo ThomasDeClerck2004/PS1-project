@@ -2,96 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery Game</title>
-    <style>
-        /* Add your styles here */
-    </style>
+    
+    <title> Economics </title>
 </head>
 <body>
-<div id="game-container">
-    <div id="output"></div>
-    <button onclick="buySupplies()">Buy Supplies</button>
-    <button onclick="bake()">Bake</button>
-    <button onclick="quit()">Quit</button>
-</div>
-
-<script>
-    let money = 1000;
-    let supplies = { 'flour': 100, 'sugar': 100, 'eggs': 100 };
-    const recipes = {
-        'cake': { 'flour': 2, 'sugar': 1, 'eggs': 1 },
-        'bread': { 'flour': 3, 'water': 1, 'yeast': 0.5 }
-    };
-
-    function updateDisplay() {
-        document.getElementById('output').innerHTML = `
-            <p>Money: $${money}</p>
-            <p>Supplies: ${JSON.stringify(supplies)}</p>
-        `;
-    }
-
-    function buySupplies() {
-        let choice = prompt("What would you like to buy?\n1. Flour\n2. Sugar\n3. Eggs");
-        let amount = parseInt(prompt("Enter the amount:"));
-        switch (choice) {
-            case '1':
-                supplies['flour'] += amount;
-                money -= amount * 0.5;
-                break;
-            case '2':
-                supplies['sugar'] += amount;
-                money -= amount * 0.4;
-                break;
-            case '3':
-                supplies['eggs'] += amount;
-                money -= amount * 0.2;
-                break;
-            default:
-                alert("Invalid choice");
-                break;
-        }
-        updateDisplay();
-    }
-
-    function bake() {
-        let choice = prompt("What would you like to bake?\n1. Cake\n2. Bread");
-        if (choice === '1' || choice === '2') {
-            let recipe = recipes[choice === '1' ? 'cake' : 'bread'];
-            if (hasEnoughSupplies(recipe)) {
-                alert("Baking " + (choice === '1' ? 'cake' : 'bread'));
-                consumeSupplies(recipe);
-                money += 20; // Example profit
-            } else {
-                alert("Not enough supplies to bake " + (choice === '1' ? 'cake' : 'bread'));
-            }
-        } else {
-            alert("Invalid choice");
-        }
-        updateDisplay();
-    }
-
-    function hasEnoughSupplies(recipe) {
-        for (let item in recipe) {
-            if (!supplies[item] || supplies[item] < recipe[item]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function consumeSupplies(recipe) {
-        for (let item in recipe) {
-            supplies[item] -= recipe[item];
-        }
-    }
-
-    function quit() {
-        alert("Thanks for playing!");
-        // Optionally, you can redirect to another page or perform other actions here
-    }
-
-    updateDisplay();
-</script>
+    
 </body>
 </html>
