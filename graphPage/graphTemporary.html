@@ -31,7 +31,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
 
     <!--Your own links-->
-    <link rel="stylesheet" href="../mainGamePage/mainGame.css">
+    <link rel="stylesheet" href="../main.css">
+    <script src="../mainGame.js"></script>
 </head>
 
 <body>
@@ -41,8 +42,8 @@
         <div class="col-md-8 p-0">
             <nav class="navbar bg-body-tertiary border-style">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <i class="bi bi-globe2" style="color: white; padding-right: 20px"></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="color: white; padding-right: 16px;">
+                        <i class="bi bi-globe2" style="color: white;"></i>
                     </button>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;" id="companyName">Company name</span>
@@ -53,9 +54,11 @@
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Total assets: 0€
+                        Total assets: <span id="totalAssetsValue">0€</span>
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
+
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn <span id="roundsValue">0</span></span>
 
                     <!--script for ? signs-->
                     <script>
@@ -87,7 +90,6 @@
                         });
                     </script>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn 0</span>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company name</h5>
@@ -96,7 +98,7 @@
                         <div class="offcanvas-body d-flex flex-column">
                             <ul class="navbar-nav flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Start</a>
+                                    <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Inventory</a>
@@ -295,6 +297,11 @@
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+
+<!--main script-->
+<script>
+
+</script>
 
 </body>
 

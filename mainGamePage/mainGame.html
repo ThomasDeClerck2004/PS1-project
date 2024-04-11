@@ -26,7 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
     <!--Your own links-->
-    <link rel="stylesheet" href="./mainGame.css">
+    <link rel="stylesheet" href="../main.css">
+    <script src="../mainGame.js"></script>
 </head>
 
 <body>
@@ -153,9 +154,11 @@
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Total assets: 0€
+                        Total assets: <span id="totalAssetsValue">0€</span>
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
+
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn <span id="roundsValue">0</span></span>
 
                     <!--script for ? signs-->
                     <script>
@@ -187,7 +190,6 @@
                         });
                     </script>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn 0</span>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company name</h5>
@@ -196,7 +198,7 @@
                         <div class="offcanvas-body d-flex flex-column">
                             <ul class="navbar-nav flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Start</a>
+                                    <a class="nav-link" href="./mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Inventory</a>
@@ -309,11 +311,6 @@
             </div>
         </div>
     </div>
-
-    <!--main game script-->
-    <script>
-
-    </script>
 </main>
 
 </body>
