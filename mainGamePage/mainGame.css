@@ -11,39 +11,58 @@
     border-left: 0px;
 }
 
+
+
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
     background-color: #198754 !important;
 }
 
+
+
 .navbar-text {
     position: relative;
 }
 
+
+
 .bi-info-circle {
     position: absolute;
-    top: 0;
-    right: 50;
-    font-size: 12px;
+    font-size: 14px;
 }
+
+
 
 .bi-stopwatch {
     color: #198754;
     background-color: white;
     font-size: 18px;
 }
-
 .bi-stopwatch:hover {
     color: white;
     background-color: #198754;
     border-radius: 1rem;
 }
 
+
+
 a {
     color: #198754;
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
+}
+
+
+
+/*Getallen kleuren codes*/
+.positive {
+    color: #198754;
+}
+.negative {
+    color: darkred;
+}
+.zero {
+    /* Add your styles for zero here */
 }
