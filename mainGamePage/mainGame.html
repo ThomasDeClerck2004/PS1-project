@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PS1-project</title>
     <meta name="author" content="Thomas De Clerck" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
@@ -29,44 +30,52 @@
 </head>
 
 <body>
-<!--&lt;!&ndash; First Popup &ndash;&gt;-->
-<!--<div id="firstPopup" class="modal fade" tabindex="-1" role="dialog">-->
-<!--    <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <h5 class="modal-title">First Popup</h5>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                This is the first popup.-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; Second Popup &ndash;&gt;-->
-<!--<div id="secondPopup" class="modal fade" tabindex="-1" role="dialog">-->
-<!--    <div class="modal-dialog" role="document">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <h5 class="modal-title">Second Popup</h5>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                This is the second popup.-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; popup script &ndash;&gt;-->
-<!--<script>-->
-<!--    // Show the first popup when the page is loaded-->
-<!--    $(document).ready(function(){-->
-<!--        $('#firstPopup').modal('show');-->
-<!--    });-->
+<!-- First Popup -->
+<div id="firstPopup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">First Popup</h5>
+            </div>
+            <div class="modal-body">
+                <label for="companyNameInput">Enter Company Name:</label>
+                <input type="text" id="companyNameInput" class="form-control" maxlength="20">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" id="saveCompanyName">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!--    // Show the second popup when the first one is closed-->
-<!--    $('#firstPopup').on('hidden.bs.modal', function () {-->
-<!--        $('#secondPopup').modal('show');-->
-<!--    });-->
-<!--</script>-->
+<!-- Second Popup -->
+<div id="secondPopup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Second Popup</h5>
+            </div>
+            <div class="modal-body">
+                This is the second popup.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- popup script -->
+<script>
+    $(document).ready(function(){
+        $('#firstPopup').modal('show');
+    });
+
+    $('#saveCompanyName').click(function() {
+        var companyName = $('#companyNameInput').val();
+        $('#companyName').text(companyName); // Set company name in the span
+        $('#offcanvasNavbarLabel').text(companyName); // Set company name in the Offcanvas
+        $('#firstPopup').modal('hide'); // Close first popup
+        $('#secondPopup').modal('show'); // Show second popup
+    });
+</script>
 
 <div class="container-fluid">
     <div class="row mb-3">
@@ -77,15 +86,16 @@
                         <i class="bi bi-globe2" style="color: white;"></i>
                     </button>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Company name</span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;" id="companyName">Company name</span>
 
-                    <!-- HTML with popover -->
-                    <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Wallet: 1000$ <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="Your current wallet balance is $1000"></i>
+                    <span class="navbar-text" style="font-weight: bold; color: white; position: relative;">
+                        Wallet: 0€
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Total assets: 1000$ <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="Your total assets amount to $1000"></i>
+                        Total assets: 0€
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true"></i>
                     </span>
 
                     <script>
@@ -117,10 +127,10 @@
                         });
                     </script>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn 12</span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn 0</span>
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company name</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -147,15 +157,18 @@
                                         <li><a class="dropdown-item" href="#">Company information</a></li>
                                     </ul>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Exit</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="col-md-4" style="text-align: right;">
+        <div class="col-md-4 d-flex justify-content-end align-items-center">
             <button type="button" class="btn btn-link">
-                <i class="bi bi-stopwatch" style="font-size: 24px;"></i>
+                <i class="bi bi-stopwatch p-2"></i>
             </button>
         </div>
     </div>
