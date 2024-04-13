@@ -39,7 +39,7 @@
                 <h5 class="modal-title">Choose your company name</h5>
             </div>
             <div class="modal-body">
-                <label for="companyNameInput">Enter Company Name:</label>
+                <label for="companyNameInput" class="pb-3">Enter Company Name:</label>
                 <input type="text" id="companyNameInput" class="form-control" maxlength="20">
             </div>
             <div class="modal-footer">
@@ -58,24 +58,21 @@
             </div>
             <div class="modal-body d-flex">
                 <div>
-                    <h3>Level 1</h3>
-                    <p class="pb-3">Beginner difficulty</p>
+                    <h5 class="pb-3">Beginner difficulty</h5>
                     <p>Wallet: 10000€</p>
                     <p>Loans: yes</p>
                     <p>Customers: 50</p>
                     <button type="button" class="btn btn-outline-success">Select</button>
                 </div>
                 <div class="px-5 mx-2">
-                    <h3>Level 2</h3>
-                    <p class="pb-3">Normal difficulty</p>
+                    <h5 class="pb-3">Normal difficulty</h5>
                     <p>Wallet: 5000€</p>
                     <p>Loans: yes</p>
                     <p>Customers: 25</p>
                     <button type="button" class="btn btn-outline-success">Select</button>
                 </div>
                 <div>
-                    <h3>Level 3</h3>
-                    <p class="pb-3">Hard difficulty</p>
+                    <h5 class="pb-3">Hard difficulty</h5>
                     <p>Wallet: 1000€</p>
                     <p>Loans: no</p>
                     <p>Customers: 0</p>
@@ -124,8 +121,8 @@
     // Update values based on selected difficulty
     $('#secondPopup .btn').click(function() {
         var level = $(this).parent().find('h3').text();
-        var wallet = $(this).parent().find('p:nth-of-type(2)').text().split(': ')[1];
-        var customers = $(this).parent().find('p:nth-of-type(4)').text().split(': ')[1];
+        var wallet = $(this).parent().find('p:nth-of-type(1)').text().split(': ')[1];
+        var customers = $(this).parent().find('p:nth-of-type(3)').text().split(': ')[1];
         $('#walletValue').text(wallet); // Update wallet value
         $('#totalCustomers').text(customers); // Update customers value
 
@@ -207,7 +204,7 @@
                                     <a class="nav-link" href="../graphPage/graphTemporary.html">Graphs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Shops</a>
+                                    <a class="nav-link" href="../shopPage/shopPage.html">Shops</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Finances</a>
@@ -245,30 +242,24 @@
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
                                 <h4 class="mb-2">Warehouse</h4>
-                                <ul>
-                                    <li>Amount of items: <span class="ps-5">0</span></li>
-                                </ul>
+                                <p class="mb-1">Amount of items: <span>0</span></p>
                                 <a href="">Go to inventory</a>
                             </div>
                             <div class="col-6 themed-grid-col">
                                 <h4 class="mb-2">Shops</h4>
-                                <ul>
-                                    <li>Amount of shops: <span class="ps-5">0</span></li>
-                                </ul>
+                                <p class="mb-1">Amount of shops: <span>0</span></p>
                                 <a href="">Go to shops</a>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
                                 <h4 class="mt-2">Finances</h4>
-                                <p>Check up on the latest developments of your company</p>
+                                <p class="mb-1">Check up on the latest developments of your company</p>
                                 <a href="">Go to finances</a>
                             </div>
                             <div class="col-6 themed-grid-col">
                                 <h4 class="mt-2">Sales</h4>
-                                <ul>
-                                    <li>Most sold item: <span class="ps-5">...</span></li>
-                                </ul>
+                                <p class="mb-1">Most sold item: <span>...</span></p>
                                 <a href="">Go to sale</a>
                             </div>
                         </div>
