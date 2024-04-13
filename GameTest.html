@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bakery</title>
     <meta name="author" content="Maximus" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <div class="container">
       <h1>Bakery Game</h1>
       <div class="main-screen">
-        <!-- Add content to the main screen here -->
+        <div class="bakery-display">
+          <img src="bakery.jpg" alt="Bakery Display" />
+          <div class="bakery-stats">
+            <div class="stat">
+              <div class="stat-name">Money:</div>
+              <div class="stat-value" id="money">$0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-name">Bread:</div>
+              <div class="stat-value" id="bread">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-name">Pastry:</div>
+              <div class="stat-value" id="pastry">0</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="button-container">
         <button id="buy-button">Buy</button>
