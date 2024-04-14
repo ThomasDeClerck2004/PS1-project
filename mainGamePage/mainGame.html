@@ -27,12 +27,11 @@
 
     <!--Your own links-->
     <link rel="stylesheet" href="../main.css">
-    <script src="../mainGame.js"></script>
 </head>
 
 <body>
 <!-- First Popup -->
-<div id="firstPopup" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal fade firstPopup" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -50,7 +49,7 @@
 </div>
 
 <!-- Second Popup -->
-<div id="secondPopup" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal fade secondPopup" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -83,57 +82,6 @@
     </div>
 </div>
 
-<!-- popup script -->
-<script>
-    class NumberStyler {
-        constructor(elementId) {
-            this.element = document.getElementById(elementId);
-            this.updateStyles();
-        }
-
-        updateStyles() {
-            const value = parseInt(this.element.textContent);
-            if (value > 0) {
-                this.element.classList.add('positive');
-                this.element.classList.remove('negative', 'zero');
-            } else if (value < 0) {
-                this.element.classList.add('negative');
-                this.element.classList.remove('positive', 'zero');
-            } else {
-                this.element.classList.add('zero');
-                this.element.classList.remove('positive', 'negative');
-            }
-        }
-    }
-
-    $(document).ready(function(){
-        $('#firstPopup').modal('show');
-    });
-
-    $('#saveCompanyName').click(function() {
-        var companyName = $('#companyNameInput').val();
-        $('#companyName').text(companyName); // Set company name in the span
-        $('#offcanvasNavbarLabel').text(companyName); // Set company name in the Offcanvas
-        $('#firstPopup').modal('hide'); // Close first popup
-        $('#secondPopup').modal('show'); // Show second popup
-    });
-
-    // Update values based on selected difficulty
-    $('#secondPopup .btn').click(function() {
-        var level = $(this).parent().find('h3').text();
-        var wallet = $(this).parent().find('p:nth-of-type(1)').text().split(': ')[1];
-        var customers = $(this).parent().find('p:nth-of-type(3)').text().split(': ')[1];
-        $('#walletValue').text(wallet); // Update wallet value
-        $('#totalCustomers').text(customers); // Update customers value
-
-        // Update styles for totalCustomers
-        const totalCustomersStyler = new NumberStyler('totalCustomers');
-        totalCustomersStyler.updateStyles();
-
-        $('#secondPopup').modal('hide'); // Close second popup
-    });
-</script>
-
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-md-8 p-0">
@@ -143,7 +91,7 @@
                         <i class="bi bi-globe2" style="color: white;"></i>
                     </button>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;" id="companyName">Company name</span>
+                    <span class="navbar-text companyName" style="font-weight: bold; color: white;">Company name</span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Wallet: <span id="walletValue">0€</span>
@@ -189,7 +137,7 @@
 
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Company name</h5>
+                            <h5 class="offcanvas-title companyName">Company name</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body d-flex flex-column">
@@ -276,7 +224,7 @@
                     <div class="p-4">
                         <p>Customers gained: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
                         <p>Customers left: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
-                        <p>Amount of customers total: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
+                        <p style="padding-bottom: 6rem;">Amount of customers total: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
                     </div>
                 </div>
             </div>
@@ -303,7 +251,7 @@
         </div>
     </div>
 </main>
-
+<script src="../mainGame.js"></script>
 </body>
 
 </html>
