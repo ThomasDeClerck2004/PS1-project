@@ -1,4 +1,5 @@
 <!-- ------------ main javascript ------------ -->
+
 // Function to update and store value in localStorage
 function updateAndStoreValue(elementId) {
     // Get the value from the element
@@ -6,7 +7,6 @@ function updateAndStoreValue(elementId) {
     // Store the value in localStorage
     localStorage.setItem(elementId, value);
 }
-
 // Function to retrieve and update value from localStorage
 function retrieveAndUpdateValue(elementId) {
     // Retrieve the value from localStorage
@@ -19,7 +19,6 @@ function retrieveAndUpdateValue(elementId) {
         styler.updateStyles();
     }
 }
-
 // Call retrieveAndUpdateValue for each element you want to initialize on page load
 $(document).ready(function() {
     retrieveAndUpdateValue('walletValue');
@@ -28,7 +27,6 @@ $(document).ready(function() {
 
     // Call additional functions as needed
 });
-
 // Update and store values when they change
 $(document).ready(function() {
     // Example for updating and storing wallet value
@@ -36,12 +34,10 @@ $(document).ready(function() {
     $('#walletValue').text(wallet); // Update wallet value
     updateAndStoreValue('walletValue'); // Store wallet value
 
-    var companyName = $('.companyName').text(); // Get current company name
-    $('.companyName').text(companyName); // Update company name
-    updateAndStoreValue('companyName'); // Store company name
-
     // Similarly update and store other values as needed
 });
+
+
 
 // number script
 class NumberStyler {
@@ -68,15 +64,34 @@ class NumberStyler {
     }
 }
 
+
+
 // popup script
-$(document).ready(function(){
-    $('.firstPopup').modal('show');
-});
+// Function to clear local storage
+function clearLocalStorage() {
+    localStorage.clear();
+}
 $(document).ready(function() {
+    // Retrieve and update company name on page load
+    var companyName = localStorage.getItem('companyName');
+    if (companyName) {
+        $('.companyName').text(companyName);
+    }
+
+    // Check if popups have been shown before
+    var popupsShown = localStorage.getItem('popupsShown');
+    if (!popupsShown) {
+        // Show first popup on page load if not shown before
+        $('.firstPopup').modal('show');
+    }
+
     // Event handler for saving company name and showing second popup
     $('#saveCompanyName').click(function() {
-        var companyName = $('#companyNameInput').val();
-        $('.companyName').text(companyName); // Set company name in the span
+        var newName = $('#companyNameInput').val();
+        if (newName) {
+            $('.companyName').text(newName); // Set company name in the span
+            localStorage.setItem('companyName', newName); // Save company name in localStorage
+        }
         $('.firstPopup').modal('hide'); // Close first popup
         $('.secondPopup').modal('show'); // Show second popup
     });
@@ -95,5 +110,30 @@ $(document).ready(function() {
         updateAndStoreValue('walletValue');
         updateAndStoreValue('totalCustomers');
         $('.secondPopup').modal('hide'); // Close second popup
+        // Mark popups as shown
+        localStorage.setItem('popupsShown', 'true');
     });
+
+    // Event handler for the exit button in popup
+    $('.exit-button').click(function() {
+        // Reshow the popup
+        $('.firstPopup').modal('show');
+        // Clear local storage
+        clearLocalStorage();
+    });
+
+    // Function to clear local storage
+    function clearLocalStorage() {
+        localStorage.clear();
+    }
+
+    // Function to update and store value in localStorage
+    function updateAndStoreValue(elementId) {
+        var value = $('#' + elementId).text();
+        localStorage.setItem(elementId, value);
+    }
 });
+
+
+
+
