@@ -3,23 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bakery</title>
-    <meta name="author" content="Maximus" />
+    <title>Bakery Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <header>
       <h1>Bakery Game</h1>
-      <div class="main-screen">
-        <!-- Add content to the main screen here -->
-      </div>
-      <div class="button-container">
+    </header>
+    <main>
+      <section class="bakery-display">
+        <figure>
+          <img src="bakery.jpg" alt="Bakery Display" />
+          <figcaption>Bakery Display</figcaption>
+        </figure>
+        <div class="bakery-stats">
+          <div class="stat">
+            <div class="stat-name">Money:</div>
+            <div class="stat-value" id="money">$0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-name">Bread:</div>
+            <div class="stat-value" id="bread">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-name">Pastry:</div>
+            <div class="stat-value" id="pastry">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-name">Customers:</div>
+            <div class="stat-value" id="customers">0</div>
+          </div>
+        </div>
+      </section>
+      <nav class="actions">
         <button id="buy-button">Buy</button>
         <button id="sell-button">Sell</button>
         <button id="bake-button">Bake</button>
-        <button id="Market">Market</button>
-        <button id="Ingredients-button">Ingredients</button>
-      </div>
-      <script src="script.js"></script>
-    </div>
+        <button id="market-button">Market</button>
+        <button id="ingredients-button">Ingredients</button>
+      </nav>
+    </main>
+    <footer>
+      <p>&copy; 2023 Bakery Game</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
