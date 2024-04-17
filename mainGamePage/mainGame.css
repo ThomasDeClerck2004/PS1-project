@@ -1,0 +1,83 @@
+/*font awesome link*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*border css*/
+.border-style {
+    border-bottom-right-radius: 20px;
+    border-bottom: 6px solid darkgreen !important;
+    border-right: 6px solid darkgreen !important;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #198754 !important;
+}
+
+
+
+.navbar-text {
+    position: relative;
+}
+
+
+
+.bi-info-circle {
+    position: absolute;
+    font-size: 14px;
+}
+
+
+
+.bi-stopwatch {
+    color: #198754;
+    background-color: white;
+    font-size: 18px;
+}
+.bi-stopwatch:hover {
+    color: white;
+    background-color: #198754;
+    border-radius: 1rem;
+}
+
+
+
+a {
+    color: #198754;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*Getallen kleuren codes*/
+.positive {
+    color: #198754;
+}
+.negative {
+    color: darkred;
+}
+.zero {
+    /* Add your styles for zero here */
+}
+
+
+
+/*transition in index page*/
+#content {
+    transition: transform 0.5s ease;
+}
+
+.slide-out {
+    transform: translateX(-100%);
+}
+
+.slide-in {
+    transform: translateX(0);
+}
