@@ -3,14 +3,14 @@
 // Function to update and store value in localStorage
 function updateAndStoreValue(elementId) {
     // Get the value from the element
-    var value = document.getElementById(elementId).textContent;
+    let value = document.getElementById(elementId).textContent;
     // Store the value in localStorage
     localStorage.setItem(elementId, value);
 }
 // Function to retrieve and update value from localStorage
 function retrieveAndUpdateValue(elementId) {
     // Retrieve the value from localStorage
-    var storedValue = localStorage.getItem(elementId);
+    let storedValue = localStorage.getItem(elementId);
     if (storedValue !== null) {
         // Update the value in the element
         document.getElementById(elementId).textContent = storedValue;
@@ -30,7 +30,7 @@ $(document).ready(function() {
 // Update and store values when they change
 $(document).ready(function() {
     // Example for updating and storing wallet value
-    var wallet = $('#walletValue').text(); // Get current wallet value
+    let wallet = $('#walletValue').text(); // Get current wallet value
     $('#walletValue').text(wallet); // Update wallet value
     updateAndStoreValue('walletValue'); // Store wallet value
 
@@ -67,19 +67,15 @@ class NumberStyler {
 
 
 // popup script
-// Function to clear local storage
-function clearLocalStorage() {
-    localStorage.clear();
-}
 $(document).ready(function() {
     // Retrieve and update company name on page load
-    var companyName = localStorage.getItem('companyName');
+    let companyName = localStorage.getItem('companyName');
     if (companyName) {
         $('.companyName').text(companyName);
     }
 
     // Check if popups have been shown before
-    var popupsShown = localStorage.getItem('popupsShown');
+    let popupsShown = localStorage.getItem('popupsShown');
     if (!popupsShown) {
         // Show first popup on page load if not shown before
         $('.firstPopup').modal('show');
@@ -87,7 +83,7 @@ $(document).ready(function() {
 
     // Event handler for saving company name and showing second popup
     $('#saveCompanyName').click(function() {
-        var newName = $('#companyNameInput').val();
+        let newName = $('#companyNameInput').val();
         if (newName) {
             $('.companyName').text(newName); // Set company name in the span
             localStorage.setItem('companyName', newName); // Save company name in localStorage
@@ -98,9 +94,9 @@ $(document).ready(function() {
 
     // Event handler for updating values based on selected difficulty
     $('.secondPopup .btn').click(function() {
-        var level = $(this).siblings('h5').text().trim(); // Get the difficulty level
-        var wallet = $(this).siblings('p').eq(0).text().split(': ')[1].trim(); // Get wallet value
-        var customers = $(this).siblings('p').eq(2).text().split(': ')[1].trim(); // Get customers value
+        let level = $(this).siblings('h5').text().trim(); // Get the difficulty level
+        let wallet = $(this).siblings('p').eq(0).text().split(': ')[1].trim(); // Get wallet value
+        let customers = $(this).siblings('p').eq(2).text().split(': ')[1].trim(); // Get customers value
         $('#walletValue').text(wallet); // Update wallet value
         $('#totalCustomers').text(customers); // Update customers value
         // Update styles for totalCustomers (assuming NumberStyler is defined)
@@ -129,11 +125,7 @@ $(document).ready(function() {
 
     // Function to update and store value in localStorage
     function updateAndStoreValue(elementId) {
-        var value = $('#' + elementId).text();
+        let value = $('#' + elementId).text();
         localStorage.setItem(elementId, value);
     }
 });
-
-
-
-
