@@ -33,12 +33,18 @@
     <!--Your own links-->
     <link rel="stylesheet" href="../main.css">
     <script src="../mainGame.js"></script>
+
+
+      
+
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row mb-3">
+        
         <div class="col-md-8 p-0">
+            
             <nav class="navbar bg-body-tertiary border-style">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="color: white; padding-right: 16px;">
@@ -59,6 +65,19 @@
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">Turn <span id="roundsValue">0</span></span>
 
+
+                    <!-- search baar met de nav -->
+                    <div class="search-container">
+                        <input type="text" id="myInput" placeholder="Zoeken...">
+                        <button onclick="searchFunction()">Zoeken</button>
+                      </div>
+                      
+                      <div class="container">
+                          <div class="row" id="searchResults">
+                            <!-- Search results will appear here -->
+                          </div>
+                      </div>
+                    
                     <!--script for ? signs-->
                     <script>
                         $(document).ready(function(){
@@ -97,7 +116,7 @@
                         <div class="offcanvas-body d-flex flex-column">
                             <ul class="navbar-nav flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./mainGame.html">Start</a>
+                                    <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Inventory</a>
@@ -115,7 +134,7 @@
                                     <a class="nav-link" href="#">Sales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Economic terms</a>
+                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economic terms</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav mt-auto">
@@ -127,7 +146,9 @@
                     </div>
                 </div>
             </nav>
+            
         </div>
+        
         <div class="col-md-4 d-flex justify-content-end align-items-center">
             <button type="button" class="btn btn-outline-success">next turn</button>
         </div>
@@ -138,6 +159,222 @@
 
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Inflatie</h5>
+                    <p class="card-text">De stijging van de algemene prijsniveaus van goederen en diensten in een economie gedurende een bepaalde periode, wat leidt tot de daling van de koopkracht van geld.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">BBP (Bruto Binnenlands Product)</h5>
+                    <p class="card-text">De totale waarde van alle goederen en diensten die binnen de grenzen van een land in een bepaalde periode worden geproduceerd.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the card structure for each economic term -->
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Monopolie</h5>
+                    <p class="card-text">Een marktsituatie waarin een enkel bedrijf de controle heeft over de productie en verkoop van een goed of dienst, zonder significante concurrentie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Monetaire beleid</h5>
+                    <p class="card-text">Het beleid van een centrale bank dat gericht is op het beheersen van de geldhoeveelheid en het renteniveau om economische doelstellingen te bereiken, zoals prijsstabiliteit en maximale werkgelegenheid.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Fiscaal beleid</h5>
+                    <p class="card-text">Het gebruik van overheidsuitgaven en belastingen om de economie te beïnvloeden, met als doel de economische groei te stimuleren, werkgelegenheid te bevorderen en inflatie te beheersen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Vraag en aanbod</h5>
+                    <p class="card-text">De relatie tussen de hoeveelheid van een goed of dienst die consumenten bereid zijn te kopen (vraag) en de hoeveelheid die producenten bereid zijn te verkopen (aanbod), beïnvloedt de prijs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Arbeidsmarkt</h5>
+                    <p class="card-text">De markt waar werkgevers en werknemers elkaar ontmoeten en waar arbeid wordt gekocht en verkocht.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Marktfalen</h5>
+                    <p class="card-text">Situaties waarin de vrije markt niet efficiënt werkt, zoals bij monopolies, externe effecten en informatieasymmetrie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Elasticiteit</h5>
+                    <p class="card-text">De mate waarin de vraag of het aanbod van een goed of dienst reageert op veranderingen in prijs, inkomen of andere variabelen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Werkloosheid</h5>
+                    <p class="card-text">Het aantal mensen dat actief op zoek is naar werk maar niet in staat is om werk te vinden.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Centrale bank</h5>
+                    <p class="card-text">Een instelling die verantwoordelijk is voor het beheer van het monetaire beleid en de uitgifte van valuta in een land.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Handelstekort</h5>
+                    <p class="card-text">Een situatie waarin de waarde van de import van een land groter is dan de waarde van de export, wat resulteert in een negatief saldo op de handelsbalans.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Handelsoverschot</h5>
+                    <p class="card-text">Een situatie waarin de waarde van de export van een land groter is dan de waarde van de import, wat resulteert in een positief saldo op de handelsbalans.</p>
+                </div>
+            </div>
+        </div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Rentetarief</h5>
+            <p class="card-text">De kosten van het lenen van geld of de opbrengst van het uitlenen van geld, uitgedrukt als een percentage van het geleende bedrag.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Globalisering</h5>
+            <p class="card-text">Het proces van toenemende economische integratie en interconnectie tussen landen, resulterend in een toename van internationale handel, investeringen en culturele uitwisseling.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Oligopolie</h5>
+            <p class="card-text">Een marktsituatie waarin een klein aantal grote bedrijven de markt domineert en invloed heeft op prijzen en andere marktvariabelen.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Concurrentie</h5>
+            <p class="card-text">De rivaliteit tussen bedrijven bij het nastreven van klanten, marktaandeel en winst.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Economische groei</h5>
+            <p class="card-text">De toename van het BBP van een land over een bepaalde periode, wat duidt op een toename van de productie en welvaart.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Deflatie</h5>
+            <p class="card-text">Een aanhoudende daling van de algemene prijsniveaus van goederen en diensten in een economie, wat kan leiden tot een negatieve spiraal van verminderde consumptie en investeringen.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Marktevenwicht</h5>
+            <p class="card-text">De situatie waarin vraag en aanbod voor een goed of dienst in balans zijn, resulterend in een stabiele prijs.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Geldschepping</h5>
+            <p class="card-text">Het proces waarbij nieuwe geldhoeveelheden worden gecreëerd door de centrale bank, meestal door middel van leningen aan commerciële banken.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Recessie</h5>
+            <p class="card-text">Een periode van verminderde economische activiteit, gekenmerkt door een afname van het BBP, werkloosheid en een daling van de consumentenbestedingen.</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Keynesiaanse economie</h5>
+            <p class="card-text">Een economische theorie die stelt dat de overheid actief moet ingrijpen in de economie om de vraag te stimuleren en recessies te bestrijden, vaak door middel van overheidsuitgaven en belastingen.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function searchFunction() {
+  var input, filter, cards, cardTitle, cardText, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  cards = document.querySelectorAll('.card');
+
+  // Clear previous search results
+  document.getElementById('searchResults').innerHTML = '';
+
+  for (i = 0; i < cards.length; i++) {
+    cardTitle = cards[i].querySelector('.card-title');
+    cardText = cards[i].querySelector('.card-text');
+    if (cardTitle && cardText) {
+      txtValue = cardTitle.textContent || cardTitle.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1 || cardText.textContent.toUpperCase().indexOf(filter) > -1) {
+        // Clone the matched card and append it to the search results container
+        var clone = cards[i].cloneNode(true);
+        document.getElementById('searchResults').appendChild(clone);
+      }
+    }
+  }
+}
+</script>
+
+    </div>
+    </div>
+<!-- javascript -->
 <script src="../mainGame.js"></script>
 
 </body>
