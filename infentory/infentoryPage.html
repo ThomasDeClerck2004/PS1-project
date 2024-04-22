@@ -25,14 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Dashboard links -->
-    <link rel="stylesheet" href="./dashboard.css">
-    <script src="./dashboard.js"></script>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
-
     <!--Your own links-->
     <link rel="stylesheet" href="../main.css">
-    <script src="../mainGame.js"></script>
 </head>
 
 <body>
@@ -100,16 +94,19 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="#">Voorraad</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./graphTemporary.html">Grafieken</a>
+                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Financiën</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Verkopen</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -131,171 +128,28 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-6 px-4">
-            <h1>test</h1>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-        </div>
-
-        <main class="col-6 px-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+<main>
+    <div class="container-fluid">
+        <div class="row m-5">
+            <div class="col-12 themed-grid-col">
+                <div class="border rounded shadow-sm">
+                    <h2 class="text-center border-bottom rounded py-3">Market<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <div class="p-4">
+                        <div class="row mb-3 text-center">
+                            <div class="col-6 themed-grid-col">
+                                <button type="button" class="btn btn-outline-success">Buy</button>
+                            </div>
+                            <div class="col-6 themed-grid-col">
+                                <button type="button" class="btn btn-outline-success">Sell</button>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
-                        <svg class="bi"><use xlink:href="#calendar3"></use></svg>
-                        This week
-                    </button>
                 </div>
             </div>
-
-            <canvas class="my-4 w-100" id="myChart" width="3099" height="1308" style="display: block; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
-
-            <h2 class="text-center">Sprints</h2>
-            <div class="table-responsive small">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>text</td>
-                        <td>random</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>placeholder</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>irrelevant</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>visual</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>random</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>text</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+        </div>
     </div>
-</div>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
-
+</main>
 <script src="../mainGame.js"></script>
-
 </body>
 
 </html>

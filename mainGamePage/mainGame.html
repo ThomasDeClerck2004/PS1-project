@@ -137,33 +137,17 @@
                 style="font-weight: bold; color: white"
               ></span>
 
-              <span class="navbar-text" style="font-weight: bold; color: white">
-                Wallet: <span id="walletValue">0€</span>
-                <i
-                  class="bi bi-info-circle"
-                  data-bs-toggle="popover"
-                  title="Wallet Information"
-                  data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>."
-                  data-bs-html="true"
-                  style="top: 0; right: -15px"
-                ></i>
-              </span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;">
+                        Geld in kas: <span id="walletValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                    </span>
 
-              <span class="navbar-text" style="font-weight: bold; color: white">
-                Total assets: <span id="totalAssetsValue">0€</span>
-                <i
-                  class="bi bi-info-circle"
-                  data-bs-toggle="popover"
-                  title="Total Assets Information"
-                  data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization."
-                  data-bs-html="true"
-                  style="top: 0; right: -15px"
-                ></i>
-              </span>
+                     <span class="navbar-text" style="font-weight: bold; color: white;">
+                        Eigen vermogen: <span id="totalAssetsValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                    </span>
 
-              <span class="navbar-text" style="font-weight: bold; color: white"
-                >Turn <span id="roundsValue">0</span></span
-              >
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
 
               <!--script for ? signs-->
               <script>
@@ -199,73 +183,46 @@
                 });
               </script>
 
-              <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title companyName"></h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body d-flex flex-column">
-                  <ul class="navbar-nav flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../mainGamePage/mainGame.html"
-                        >Start</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Inventory</a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="../graphPage/graphTemporary.html"
-                        >Graphs</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../shopPage/shopPage.html"
-                        >Shops</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Finances</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Sales</a>
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        href="../economicTermsPage/economicTerms.html"
-                        >Economic terms</a
-                      >
-                    </li>
-                  </ul>
-                  <ul class="navbar-nav mt-auto">
-                    <li class="nav-item">
-                      <a class="nav-link exit-button" href="../index.html"
-                        >Exit</a
-                      >
-                    </li>
-                  </ul>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title companyName"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column">
+                            <ul class="navbar-nav flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Financiën</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav mt-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link exit-button" href="../index.html">Exit</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
           </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
-          <button type="button" class="btn btn-outline-success">
-            next turn
-          </button>
+            <button type="button" class="btn btn-outline-success">Volgende ronde</button>
         </div>
       </div>
     </div>
@@ -273,88 +230,52 @@
     <main>
       <div class="container-fluid">
         <div class="row m-5">
-          <div class="col-sm-6 col-lg-8 themed-grid-col">
-            <div class="border rounded shadow-sm">
-              <h2 class="text-center border-bottom rounded py-3">
-                Main information<i
-                  class="bi bi-info-circle"
-                  data-bs-toggle="popover"
-                  title="Wallet Information"
-                  data-bs-content="T"
-                  data-bs-html="true"
-                ></i>
-              </h2>
-              <div class="p-4">
-                <div class="row mb-3">
-                  <div class="col-6 themed-grid-col">
-                    <h4 class="mb-2">Warehouse</h4>
-                    <p class="mb-1">Amount of items: <span>0</span></p>
-                    <a href="">Go to inventory</a>
-                  </div>
-                  <div class="col-6 themed-grid-col">
-                    <h4 class="mb-2">Shops</h4>
-                    <p class="mb-1">Amount of shops: <span>0</span></p>
-                    <a href="">Go to shops</a>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6 themed-grid-col">
-                    <h4 class="mt-2">Finances</h4>
-                    <p class="mb-1">
-                      Check up on the latest developments of your company
-                    </p>
-                    <a href="">Go to finances</a>
-                  </div>
-                  <div class="col-6 themed-grid-col">
-                    <h4 class="mt-2">Sales</h4>
-                    <p class="mb-1">Most sold item: <span>...</span></p>
-                    <a href="">Go to sale</a>
-                  </div>
-                </div>
-                <div>
-                  <p></p>
+            <div class="col-sm-6 col-lg-8 themed-grid-col">
+                <div class="border rounded shadow-sm">
+                    <h2 class="text-center border-bottom rounded py-3">Dashboard<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <div class="p-4">
+                        <div class="row mb-3">
+                            <div class="col-6 themed-grid-col">
+                                <h4 class="mb-2">Magazijn</h4>
+                                <p class="mb-1">Aantal items: <span>0</span></p>
+                                <a href="">Ga naar inventaris</a>
+                            </div>
+                            <div class="col-6 themed-grid-col">
+                                <h4 class="mb-2">Winkels</h4>
+                                <p class="mb-1">Aantal winkels: <span>0</span></p>
+                                <a href="">Ga naar winkels</a>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6 themed-grid-col">
+                                <h4 class="mt-2">Financiën</h4>
+                                <p class="mb-1">Bekijk de laatste ontwikkelingen van je bedrijf</p>
+                                <a href="">Ga naar financiën</a>
+                            </div>
+                            <div class="col-6 themed-grid-col">
+                                <h4 class="mt-2">Verkoop</h4>
+                                <p class="mb-1">Meest verkochte item: <span>...</span></p>
+                                <a href="">Ga naar verkoop</a>
+                            </div>
+
+                        </div>
+                        <div>
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-6 col-lg-4 themed-grid-col">
-            <div class="border rounded shadow-sm">
-              <h2 class="text-center border-bottom rounded py-3">
-                Customer information<i
-                  class="bi bi-info-circle"
-                  data-bs-toggle="popover"
-                  title="Wallet Information"
-                  data-bs-content="T"
-                  data-bs-html="true"
-                ></i>
-              </h2>
-              <div class="p-4">
-                <p>
-                  Customers gained:
-                  <span
-                    id="customersGained"
-                    style="display: inline-block; float: right"
-                    >0</span
-                  >
-                </p>
-                <p>
-                  Customers left:
-                  <span
-                    id="customersLeft"
-                    style="display: inline-block; float: right"
-                    >0</span
-                  >
-                </p>
-                <p style="padding-bottom: 6.1rem">
-                  Amount of customers total:
-                  <span
-                    id="totalCustomers"
-                    style="display: inline-block; float: right"
-                    >0</span
-                  >
-                </p>
-              </div>
+            <div class="col-6 col-lg-4 themed-grid-col">
+                <div class="border rounded shadow-sm">
+                    <h2 class="text-center border-bottom rounded py-3">Klanteninformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Klanteninformatie" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <div class="p-4">
+                        <p>Nieuwe klanten: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
+                        <p>Vertrokken klanten: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
+                        <p style="padding-bottom: 6.1rem;">Totaal aantal klanten: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
