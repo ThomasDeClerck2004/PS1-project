@@ -41,23 +41,23 @@
         <div class="col-md-8 p-0">
             <nav class="navbar bg-body-tertiary border-style">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="color: white; padding-right: 16px;">
                         <i class="bi bi-globe2" style="color: white;"></i>
                     </button>
 
                     <span class="navbar-text companyName" style="font-weight: bold; color: white;"></span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Geld in kas: <span id="walletValue">0€</span>
+                        Wallet: <span id="walletValue">0€</span>
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        Total assets: <span id="totalAssetsValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn <span id="roundsValue">0</span></span>
 
                     <!--script for ? signs-->
                     <script>
@@ -100,24 +100,27 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="#">Inventory</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./graphTemporary.html">Grafieken</a>
+                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Graphs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
+                                    <a class="nav-link" href="../shopPage/shopPage.html">Shops</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Financiën</a>
+                                    <a class="nav-link" href="#">Finances</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
+                                    <a class="nav-link" href="#">Sales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economic terms</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav mt-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link exit-button" href="../index.html">Exit</a>
+                                    <a class="nav-link" href="../index.html">Exit</a>
                                 </li>
                             </ul>
                         </div>
@@ -126,7 +129,7 @@
             </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
-            <button type="button" class="btn btn-outline-success">Volgende ronde</button>
+            <button type="button" class="btn btn-outline-success">next turn</button>
         </div>
     </div>
 </div>
