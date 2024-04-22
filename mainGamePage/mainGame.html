@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PS1-project</title>
@@ -8,30 +9,15 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet" />
     <!-- Bootstrap Select -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/css/bootstrap-select.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0/css/bootstrap-select.min.css" rel="stylesheet" />
     <!-- Bootstrap Datepicker -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" />
     <!-- Bootstrap Table -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.18.3/bootstrap-table.min.css" rel="stylesheet" />
     <!-- Optional: Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <!-- Optional: jQuery -->
@@ -42,146 +28,122 @@
 
     <!--Your own links-->
     <link rel="stylesheet" href="../main.css" />
-  </head>
+</head>
 
-  <body>
-    <!-- First Popup -->
-    <div class="modal fade firstPopup" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+<body>
+<!-- First Popup -->
+<div class="modal fade firstPopup" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Choose your company name</h5>
-          </div>
-          <div class="modal-body">
-            <label for="companyNameInput" class="pb-3"
-              >Enter Company Name:</label
-            >
-            <input
-              type="text"
-              id="companyNameInput"
-              class="form-control"
-              maxlength="20"
-            />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-outline-success"
-              id="saveCompanyName"
-            >
-              Save
-            </button>
-          </div>
+            <div class="modal-header">
+                <h5 class="modal-title">Choose your company name</h5>
+            </div>
+            <div class="modal-body">
+                <label for="companyNameInput" class="pb-3">Enter Company Name:</label>
+                <input type="text" id="companyNameInput" class="form-control" maxlength="20" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" id="saveCompanyName">
+                    Save
+                </button>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- Second Popup -->
-    <div class="modal fade secondPopup" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+<!-- Second Popup -->
+<div class="modal fade secondPopup" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Choose your difficulty level</h5>
-          </div>
-          <div class="modal-body d-flex">
-            <div>
-              <h5 class="pb-3">Beginner difficulty</h5>
-              <p>Wallet: 10000€</p>
-              <p>Loans: yes</p>
-              <p>Customers: 50</p>
-              <button type="button" class="btn btn-outline-success">
-                Select
-              </button>
+            <div class="modal-header">
+                <h5 class="modal-title">Choose your difficulty level</h5>
             </div>
-            <div class="px-5 mx-2">
-              <h5 class="pb-3">Normal difficulty</h5>
-              <p>Wallet: 5000€</p>
-              <p>Loans: yes</p>
-              <p>Customers: 25</p>
-              <button type="button" class="btn btn-outline-success">
-                Select
-              </button>
+            <div class="modal-body d-flex">
+                <div>
+                    <h5 class="pb-3">Beginner difficulty</h5>
+                    <p>Wallet: 10000€</p>
+                    <p>Loans: yes</p>
+                    <p>Customers: 50</p>
+                    <button type="button" class="btn btn-outline-success">
+                        Select
+                    </button>
+                </div>
+                <div class="px-5 mx-2">
+                    <h5 class="pb-3">Normal difficulty</h5>
+                    <p>Wallet: 5000€</p>
+                    <p>Loans: yes</p>
+                    <p>Customers: 25</p>
+                    <button type="button" class="btn btn-outline-success">
+                        Select
+                    </button>
+                </div>
+                <div>
+                    <h5 class="pb-3">Hard difficulty</h5>
+                    <p>Wallet: 1000€</p>
+                    <p>Loans: no</p>
+                    <p>Customers: 0</p>
+                    <button type="button" class="btn btn-outline-success">
+                        Select
+                    </button>
+                </div>
             </div>
-            <div>
-              <h5 class="pb-3">Hard difficulty</h5>
-              <p>Wallet: 1000€</p>
-              <p>Loans: no</p>
-              <p>Customers: 0</p>
-              <button type="button" class="btn btn-outline-success">
-                Select
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <div class="container-fluid">
-      <div class="row mb-3">
+<div class="container-fluid">
+    <div class="row mb-3">
         <div class="col-md-8 p-0">
-          <nav class="navbar bg-body-tertiary border-style">
-            <div class="container-fluid">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar"
-                aria-label="Toggle navigation"
-              >
-                <i class="bi bi-globe2" style="color: white"></i>
-              </button>
+            <nav class="navbar bg-body-tertiary border-style">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="bi bi-globe2" style="color: white;"></i>
+                    </button>
 
-              <span
-                class="navbar-text companyName"
-                style="font-weight: bold; color: white"
-              ></span>
+                    <span class="navbar-text companyName" style="font-weight: bold; color: white;"></span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Geld in kas: <span id="walletValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
-                    </span>
+                            Geld in kas: <span id="walletValue">0€</span>
+                            <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        </span>
 
-                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
-                    </span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;">
+                            Eigen vermogen: <span id="totalAssetsValue">0€</span>
+                            <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
 
-              <!--script for ? signs-->
-              <script>
-                $(document).ready(function () {
-                  // Initialize Bootstrap popovers
-                  $('[data-bs-toggle="popover"]').popover({
-                    trigger: "manual",
-                  });
+                    <!--script for ? signs-->
+                    <script>
+                        $(document).ready(function() {
+                            // Initialize Bootstrap popovers
+                            $('[data-bs-toggle="popover"]').popover({
+                                trigger: 'manual'
+                            });
 
-                  // Show popover on hover
-                  $('[data-bs-toggle="popover"]').on("mouseenter", function () {
-                    var popover = $(this);
-                    popover.popover("show");
-                    // Close popover after 5 seconds
-                    setTimeout(function () {
-                      popover.popover("hide");
-                    }, 5000);
-                  });
+                            // Show popover on hover
+                            $('[data-bs-toggle="popover"]').on('mouseenter', function() {
+                                var popover = $(this);
+                                popover.popover('show');
+                                // Close popover after 5 seconds
+                                setTimeout(function() {
+                                    popover.popover('hide');
+                                }, 5000);
+                            });
 
-                  // Close popover on next click anywhere else
-                  $(document).on("click", function (e) {
-                    $('[data-bs-toggle="popover"]').each(function () {
-                      // If the clicked element is not the popover itself or is not contained within the popover
-                      if (
-                        !$(this).is(e.target) &&
-                        $(this).has(e.target).length === 0 &&
-                        $(".popover").has(e.target).length === 0
-                      ) {
-                        $(this).popover("hide");
-                      }
-                    });
-                  });
-                });
-              </script>
+                            // Close popover on next click anywhere else
+                            $(document).on('click', function(e) {
+                                $('[data-bs-toggle="popover"]').each(function() {
+                                    // If the clicked element is not the popover itself or is not contained within the popover
+                                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                                        $(this).popover('hide');
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
 
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
@@ -191,7 +153,7 @@
                         <div class="offcanvas-body d-flex flex-column">
                             <ul class="navbar-nav flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
+                                    <a class="nav-link" href="./mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
@@ -217,146 +179,112 @@
                         </div>
                     </div>
                 </div>
-              </div>
-            </div>
-          </nav>
+            </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
             <button type="button" class="btn btn-outline-success">Volgende ronde</button>
         </div>
-      </div>
     </div>
+</div>
 
-    <main>
-      <div class="container-fluid">
+<main>
+    <div class="container-fluid">
         <div class="row m-5">
             <div class="col-sm-6 col-lg-8 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Dashboard<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <h2 class="text-center border-bottom rounded py-3">Main information<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
                     <div class="p-4">
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Magazijn</h4>
-                                <p class="mb-1">Aantal items: <span>0</span></p>
-                                <a href="">Ga naar inventaris</a>
+                                <h4 class="mb-2">Warehouse</h4>
+                                <p class="mb-1">Amount of items: <span>0</span></p>
+                                <a href="">Go to inventory</a>
                             </div>
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Winkels</h4>
-                                <p class="mb-1">Aantal winkels: <span>0</span></p>
-                                <a href="">Ga naar winkels</a>
+                                <h4 class="mb-2">Shops</h4>
+                                <p class="mb-1">Amount of shops: <span>0</span></p>
+                                <a href="">Go to shops</a>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Financiën</h4>
-                                <p class="mb-1">Bekijk de laatste ontwikkelingen van je bedrijf</p>
-                                <a href="">Ga naar financiën</a>
+                                <h4 class="mt-2">Finances</h4>
+                                <p class="mb-1">Check up on the latest developments of your company</p>
+                                <a href="">Go to finances</a>
                             </div>
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Verkoop</h4>
-                                <p class="mb-1">Meest verkochte item: <span>...</span></p>
-                                <a href="">Ga naar verkoop</a>
+                                <h4 class="mt-2">Sales</h4>
+                                <p class="mb-1">Most sold item: <span>...</span></p>
+                                <a href="">Go to sale</a>
                             </div>
-
                         </div>
                         <div>
                             <p></p>
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
-          </div>
+
             <div class="col-6 col-lg-4 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Klanteninformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Klanteninformatie" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <h2 class="text-center border-bottom rounded py-3">Customer information<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
                     <div class="p-4">
-                        <p>Nieuwe klanten: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
-                        <p>Vertrokken klanten: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
-                        <p style="padding-bottom: 6.1rem;">Totaal aantal klanten: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
+                        <p>Customers gained: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
+                        <p>Customers left: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
+                        <p style="padding-bottom: 6.1rem;">Amount of customers total: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 
-      <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row m-5">
-          <div class="col-12 themed-grid-col">
-            <div class="border rounded shadow-sm">
-              <h2 class="text-center border-bottom rounded py-3">
-                Market<i
-                  class="bi bi-info-circle"
-                  data-bs-toggle="popover"
-                  title="Wallet Information"
-                  data-bs-content="T"
-                  data-bs-html="true"
-                ></i>
-              </h2>
-              <div class="p-4">
-                <p>
-                  Pastry:
-                  <span
-                    id="customersGained"
-                    style="display: inline-block; float: right"
-                    >0</span
-                  >
-                </p>
-                <p>
-                  Bread:
-                  <span
-                    id="customersGained"
-                    style="display: inline-block; float: right"
-                    >0</span
-                  >
-                </p>
-              </div>
-              <div class="p-4">
-                <div class="row mb-3 text-center">
-                  <div class="col-3 themed-grid-col">
-                    <button
-                      id="buy-button"
-                      type="button"
-                      class="btn btn-outline-success"
-                    >
-                      Buy
-                    </button>
-                  </div>
-                  <div class="col-3 themed-grid-col">
-                    <button
-                      id="sell-button"
-                      type="button"
-                      class="btn btn-outline-success"
-                    >
-                      Sell
-                    </button>
-                  </div>
-                  <div class="col-3 themed-grid-col">
-                    <button
-                      id="bake-button"
-                      type="button"
-                      class="btn btn-outline-success"
-                    >
-                      Bake
-                    </button>
-                  </div>
-                  <div class="col-3 themed-grid-col">
-                    <button
-                      id="ingredients-button"
-                      type="button"
-                      class="btn btn-outline-success"
-                    >
-                      Ingredients
-                    </button>
-                  </div>
+            <div class="col-12 themed-grid-col">
+                <div class="border rounded shadow-sm">
+                    <h2 class="text-center border-bottom rounded py-3">
+                        Market<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i>
+                    </h2>
+                    <div class="p-4">
+                        <p>
+                            Pastry:
+                            <span id="id" style="display: inline-block; float: right">0</span>
+                        </p>
+                        <p>
+                            Bread:
+                            <span id="id1" style="display: inline-block; float: right">0</span>
+                        </p>
+                    </div>
+                    <div class="p-4">
+                        <div class="row mb-3 text-center">
+                            <div class="col-3 themed-grid-col">
+                                <button id="buy-button" type="button" class="btn btn-outline-success">
+                                    Buy
+                                </button>
+                            </div>
+                            <div class="col-3 themed-grid-col">
+                                <button id="sell-button" type="button" class="btn btn-outline-success">
+                                    Sell
+                                </button>
+                            </div>
+                            <div class="col-3 themed-grid-col">
+                                <button id="bake-button" type="button" class="btn btn-outline-success">
+                                    Bake
+                                </button>
+                            </div>
+                            <div class="col-3 themed-grid-col">
+                                <button id="ingredients-button" type="button" class="btn btn-outline-success">
+                                    Ingredients
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </main>
-    <script src="../mainGame.js"></script>
-  </body>
+    </div>
+</main>
+<script src="../mainGame.js"></script>
+</body>
+
 </html>
