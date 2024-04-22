@@ -52,16 +52,29 @@
                     <span class="navbar-text companyName" style="font-weight: bold; color: white;"></span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Geld in kas: <span id="walletValue">0€</span>
+                        Wallet: <span id="walletValue">0€</span>
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                        Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        Total assets: <span id="totalAssetsValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;">Turn <span id="roundsValue">0</span></span>
+
+
+                    <!-- search baar met de nav -->
+                    <div class="search-container">
+                        <input type="text" id="myInput" placeholder="Zoeken...">
+                        <button onclick="searchFunction()">Zoeken</button>
+                    </div>
+
+                    <div class="container">
+                        <div class="row" id="searchResults">
+                            <!-- Search results will appear here -->
+                        </div>
+                    </div>
 
                     <!--script for ? signs-->
                     <script>
@@ -104,24 +117,27 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="#">Inventory</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
+                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Graphs</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
+                                    <a class="nav-link" href="../shopPage/shopPage.html">Shops</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Financiën</a>
+                                    <a class="nav-link" href="#">Finances</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
+                                    <a class="nav-link" href="#">Sales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economic terms</a>
                                 </li>
                             </ul>
                             <ul class="navbar-nav mt-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link exit-button" href="../index.html">Exit</a>
+                                    <a class="nav-link" href="../index.html">Exit</a>
                                 </li>
                             </ul>
                         </div>
