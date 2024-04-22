@@ -30,58 +30,6 @@
 </head>
 
 <body>
-<!-- First Popup -->
-<div class="modal fade firstPopup" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Choose your company name</h5>
-            </div>
-            <div class="modal-body">
-                <label for="companyNameInput" class="pb-3">Enter Company Name:</label>
-                <input type="text" id="companyNameInput" class="form-control" maxlength="20">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" id="saveCompanyName">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Second Popup -->
-<div class="modal fade secondPopup" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Choose your difficulty level</h5>
-            </div>
-            <div class="modal-body d-flex">
-                <div>
-                    <h5 class="pb-3">Beginner difficulty</h5>
-                    <p>Wallet: 10000€</p>
-                    <p>Loans: yes</p>
-                    <p>Customers: 50</p>
-                    <button type="button" class="btn btn-outline-success">Select</button>
-                </div>
-                <div class="px-5 mx-2">
-                    <h5 class="pb-3">Normal difficulty</h5>
-                    <p>Wallet: 5000€</p>
-                    <p>Loans: yes</p>
-                    <p>Customers: 25</p>
-                    <button type="button" class="btn btn-outline-success">Select</button>
-                </div>
-                <div>
-                    <h5 class="pb-3">Hard difficulty</h5>
-                    <p>Wallet: 1000€</p>
-                    <p>Loans: no</p>
-                    <p>Customers: 0</p>
-                    <button type="button" class="btn btn-outline-success">Select</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-md-8 p-0">
@@ -98,7 +46,7 @@
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
-                     <span class="navbar-text" style="font-weight: bold; color: white;">
+                    <span class="navbar-text" style="font-weight: bold; color: white;">
                         Eigen vermogen: <span id="totalAssetsValue">0€</span>
                         <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
@@ -146,7 +94,7 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="#">Voorraad</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
@@ -156,6 +104,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Financiën</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Verkopen</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -178,57 +129,6 @@
 </div>
 
 <main>
-    <div class="container-fluid">
-        <div class="row m-5">
-            <div class="col-sm-6 col-lg-8 themed-grid-col">
-                <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Dashboard<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
-                    <div class="p-4">
-                        <div class="row mb-3">
-                            <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Magazijn</h4>
-                                <p class="mb-1">Aantal items: <span>0</span></p>
-                                <a href="">Ga naar inventaris</a>
-                            </div>
-                            <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Winkels</h4>
-                                <p class="mb-1">Aantal winkels: <span>0</span></p>
-                                <a href="">Ga naar winkels</a>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Financiën</h4>
-                                <p class="mb-1">Bekijk de laatste ontwikkelingen van je bedrijf</p>
-                                <a href="">Ga naar financiën</a>
-                            </div>
-                            <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Verkoop</h4>
-                                <p class="mb-1">Meest verkochte item: <span>...</span></p>
-                                <a href="">Ga naar verkoop</a>
-                            </div>
-
-                        </div>
-                        <div>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-4 themed-grid-col">
-                <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Klanteninformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Klanteninformatie" data-bs-content="T" data-bs-html="true"></i></h2>
-                    <div class="p-4">
-                        <p>Nieuwe klanten: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
-                        <p>Vertrokken klanten: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
-                        <p style="padding-bottom: 6.1rem;">Totaal aantal klanten: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container-fluid">
         <div class="row m-5">
             <div class="col-12 themed-grid-col">
