@@ -24,6 +24,7 @@ $(document).ready(function() {
     retrieveAndUpdateValue('walletValue');
     retrieveAndUpdateValue('totalAssetsValue');
     retrieveAndUpdateValue('roundsValue');
+    retrieveAndUpdateValue('totalCustomers')
 
     // Call additional functions as needed
 });
@@ -33,6 +34,10 @@ $(document).ready(function() {
     let wallet = $('#walletValue').text(); // Get current wallet value
     $('#walletValue').text(wallet); // Update wallet value
     updateAndStoreValue('walletValue'); // Store wallet value
+
+    let customers = $('#totalCustomers').text(); // Get current wallet value
+    $('#totalCustomers').text(customers); // Update wallet value
+    updateAndStoreValue('totalCustomers'); // Store wallet value
 
     // Similarly update and store other values as needed
 });
