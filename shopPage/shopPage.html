@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PS1-project</title>
-    <meta name="author" content="Thomas De Clerck" />
+    <meta name="author" content="O-reo" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
     <!-- Bootstrap CSS -->
@@ -43,12 +43,12 @@
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Geld in kas: <span id="walletValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Geld in kas" data-bs-content="Verwijst naar het geld dat het bedrijf direct beschikbaar heeft voor dagelijkse <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>transacties</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Eigen vermogen" data-bs-content="Het <a href='../economicTermsPage/economicTerms.html#eigenvermogenTitel'>eigen vermogen</a> van een <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>onderneming</a> wordt berekend door de <a href='../economicTermsPage/economicTerms.html#schuldenTitel'>schulden</a> van de <a href='../economicTermsPage/economicTerms.html#activaTitel'>activa</a> af te trekken" data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
@@ -94,7 +94,7 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="../infentoryPage/infentoryPage.html">Voorraad</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
@@ -103,7 +103,7 @@
                                     <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Financiën</a>
+                                    <a class="nav-link" href="../financesPage/financesPage.html">Financiën</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -120,7 +120,7 @@
             </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
-            <button type="button" class="btn btn-outline-success">Volgende ronde</button>
+            <button id="nextRoundButton" type="button" class="btn btn-outline-success">Volgende ronde</button>
         </div>
     </div>
 </div>
@@ -128,21 +128,22 @@
 <main>
     <div class="album py-5">
         <div class="container">
+            <h2 class="mb-4">Koop uw winkels hier:</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Antwerpen</li>
+                                <li>Bouwjaar: 1985</li>
+                                <li>120m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">70 000€</small>
                             </div>
                         </div>
                     </div>
@@ -152,15 +153,15 @@
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Brussels</li>
+                                <li>Bouwjaar: 1978</li>
+                                <li>160m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">85 000€</small>
                             </div>
                         </div>
                     </div>
@@ -170,52 +171,34 @@
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Ghent</li>
+                                <li>Bouwjaar: 2000</li>
+                                <li>100m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">65 000€</small>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!-- Herhaal deze col-divs voor verdere variatie -->
                 <div class="col">
                     <div class="card shadow-sm">
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Leuven</li>
+                                <li>Bouwjaar: 1995</li>
+                                <li>130m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
-                        <div class="card-body">
-                            <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
-                            </ul>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-outline-success">Kopen</button>
-                                </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">75 000€</small>
                             </div>
                         </div>
                     </div>
@@ -225,34 +208,15 @@
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Bruges</li>
+                                <li>Bouwjaar: 1965</li>
+                                <li>180m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
-                        <div class="card-body">
-                            <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
-                            </ul>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-outline-success">Kopen</button>
-                                </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">95 000€</small>
                             </div>
                         </div>
                     </div>
@@ -262,15 +226,15 @@
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Mechelen</li>
+                                <li>Bouwjaar: 1980</li>
+                                <li>150m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">80 000€</small>
                             </div>
                         </div>
                     </div>
@@ -280,15 +244,51 @@
                         <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
                         <div class="card-body">
                             <ul>
-                                <li>Locatie: Turnhout</li>
-                                <li>Bouwjaar: 1960</li>
-                                <li>146m²</li>
+                                <li>Locatie: Liege</li>
+                                <li>Bouwjaar: 1970</li>
+                                <li>170m²</li>
                             </ul>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-success">Kopen</button>
                                 </div>
-                                <small class="text-body-secondary">50 000€</small>
+                                <small class="text-body-secondary">90 000€</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
+                        <div class="card-body">
+                            <ul>
+                                <li>Locatie: Geel</li>
+                                <li>Bouwjaar: 1945</li>
+                                <li>170m²</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-success">Kopen</button>
+                                </div>
+                                <small class="text-body-secondary">90 000€</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="../assets/1067x1200.jpg" alt="The huur sign" width="100%" height="225" style="border-bottom: 1px solid black; border-radius: 1rem;">
+                        <div class="card-body">
+                            <ul>
+                                <li>Locatie: Liege</li>
+                                <li>Bouwjaar: 1916</li>
+                                <li>170m²</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-success">Kopen</button>
+                                </div>
+                                <small class="text-body-secondary">70 000€</small>
                             </div>
                         </div>
                     </div>

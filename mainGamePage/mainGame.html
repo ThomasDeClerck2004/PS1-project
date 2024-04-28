@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PS1-project</title>
-    <meta name="author" content="Thomas De Clerck" />
+    <meta name="author" content="O-reo" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
 
     <!-- Bootstrap CSS -->
@@ -103,16 +103,16 @@
                     <span class="navbar-text companyName" style="font-weight: bold; color: white;"></span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                            Geld in kas: <span id="walletValue">0€</span>
-                            <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
-                        </span>
+                        Geld in kas: <span id="walletValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Geld in kas" data-bs-content="Verwijst naar het geld dat het bedrijf direct beschikbaar heeft voor dagelijkse <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>transacties</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                    </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
-                            Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                            <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
-                        </span>
+                        Eigen vermogen: <span id="totalAssetsValue">0€</span>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Eigen vermogen" data-bs-content="Het <a href='../economicTermsPage/economicTerms.html#eigenvermogenTitel'>eigen vermogen</a> van een <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>onderneming</a> wordt berekend door de <a href='../economicTermsPage/economicTerms.html#schuldenTitel'>schulden</a> van de <a href='../economicTermsPage/economicTerms.html#activaTitel'>activa</a> af te trekken" data-bs-html="true" style="top: 0; right: -15px;"></i>
+                    </span>
 
-                    <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
+                    <span class="navbar-text" style="font-weight: bold; color: white;" id="roundsDisplay">Ronde <span id="roundsValue">0</span></span>
 
                     <!--script for ? signs-->
                     <script>
@@ -156,7 +156,7 @@
                                     <a class="nav-link" href="./mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentory/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="../infentoryPage/infentoryPage.html">Voorraad</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
@@ -165,7 +165,7 @@
                                     <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Financiën</a>
+                                    <a class="nav-link" href="../financesPage/financesPage.html">Financiën</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -182,7 +182,7 @@
             </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
-            <button type="button" class="btn btn-outline-success">Volgende ronde</button>
+            <button id="nextRoundButton" type="button" class="btn btn-outline-success">Volgende ronde</button>
         </div>
     </div>
 </div>
@@ -192,30 +192,30 @@
         <div class="row m-5">
             <div class="col-sm-6 col-lg-8 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Main information<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <h2 class="text-center border-bottom rounded py-3">Dashboard<i class="bi bi-info-circle" data-bs-toggle="popover" title="Dashboard" data-bs-content="Dit is het dashboard waar je door je bedrijf kunt navigeren." data-bs-html="true"></i></h2>
                     <div class="p-4">
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Warehouse</h4>
-                                <p class="mb-1">Amount of items: <span>0</span></p>
-                                <a href="">Go to inventory</a>
+                                <h4 class="mb-2">Magazijn</h4>
+                                <p class="mb-1">Aantal items: <span>0</span></p>
+                                <a href="../infentoryPage/infentoryPage.html">Ga naar inventaris</a>
                             </div>
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mb-2">Shops</h4>
-                                <p class="mb-1">Amount of shops: <span>0</span></p>
-                                <a href="">Go to shops</a>
+                                <h4 class="mb-2">Winkels</h4>
+                                <p class="mb-1">Aantal winkels: <span>0</span></p>
+                                <a href="../shopPage/shopPage.html">Ga naar winkels</a>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Finances</h4>
-                                <p class="mb-1">Check up on the latest developments of your company</p>
-                                <a href="">Go to finances</a>
+                                <h4 class="mt-2">Financiën</h4>
+                                <p class="mb-1">Controleer de laatste ontwikkelingen van uw bedrijf</p>
+                                <a href="../financesPage/financesPage.html">Ga naar financiën</a>
                             </div>
                             <div class="col-6 themed-grid-col">
-                                <h4 class="mt-2">Sales</h4>
-                                <p class="mb-1">Most sold item: <span>...</span></p>
-                                <a href="">Go to sale</a>
+                                <h4 class="mt-2">Grafieken</h4>
+                                <p class="mb-1">Bekijk de stand van zaken</p>
+                                <a href="../graphPage/graphTemporary.html">Ga naar grafieken</a>
                             </div>
                         </div>
                         <div>
@@ -227,11 +227,11 @@
 
             <div class="col-6 col-lg-4 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Customer information<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <h2 class="text-center border-bottom rounded py-3">Klantinformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Klantinformatie" data-bs-content="Hier kun je zien hoeveel klanten je hebt, hoeveel er lid zijn geworden en hoeveel er zijn vertrokken. Het is belangrijk om dit getal positief te houden voor een gerichte <a href='../economicTermsPage/economicTerms.html#omzetTitel'>omzet</a>." data-bs-html="true"></i></h2>
                     <div class="p-4">
-                        <p>Customers gained: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
-                        <p>Customers left: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
-                        <p style="padding-bottom: 6.1rem;">Amount of customers total: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
+                        <p>Klanten gewonnen: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
+                        <p>Klanten vertrokken: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
+                        <p style="padding-bottom: 6.1rem;">Totaal aantal klanten: <span id="totalCustomers" style="display: inline-block; float: right;">0</span></p>
                     </div>
                 </div>
             </div>
@@ -243,38 +243,46 @@
             <div class="col-12 themed-grid-col">
                 <div class="border rounded shadow-sm">
                     <h2 class="text-center border-bottom rounded py-3">
-                        Market<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i>
+                        Bakker<i class="bi bi-info-circle" data-bs-toggle="popover" title="Bakker Informatie" data-bs-content="Dit is de plek waar je al je baksels maakt en verkoopt + ingrediënten koopt en gebruikt." data-bs-html="true"></i>
                     </h2>
                     <div class="p-4">
                         <p>
-                            Pastry:
-                            <span id="id" style="display: inline-block; float: right">0</span>
+                            Brood:
+                            <span id="totalBrood" style="display: inline-block; float: right">0</span>
                         </p>
                         <p>
-                            Bread:
-                            <span id="id1" style="display: inline-block; float: right">0</span>
+                            Croissants:
+                            <span id="totalCroissants" style="display: inline-block; float: right">0</span>
+                        </p>
+                        <p>
+                            Taarten:
+                            <span id="totalTaarten" style="display: inline-block; float: right">0</span>
+                        </p>
+                        <p>
+                            Banket:
+                            <span id="totalBanket" style="display: inline-block; float: right">0</span>
                         </p>
                     </div>
                     <div class="p-4">
                         <div class="row mb-3 text-center">
                             <div class="col-3 themed-grid-col">
                                 <button id="buy-button" type="button" class="btn btn-outline-success">
-                                    Buy
+                                    Kopen
                                 </button>
                             </div>
                             <div class="col-3 themed-grid-col">
                                 <button id="sell-button" type="button" class="btn btn-outline-success">
-                                    Sell
+                                    Verkopen
                                 </button>
                             </div>
                             <div class="col-3 themed-grid-col">
                                 <button id="bake-button" type="button" class="btn btn-outline-success">
-                                    Bake
+                                    Bakken
                                 </button>
                             </div>
                             <div class="col-3 themed-grid-col">
                                 <button id="ingredients-button" type="button" class="btn btn-outline-success">
-                                    Ingredients
+                                    Ingrediënten
                                 </button>
                             </div>
                         </div>
