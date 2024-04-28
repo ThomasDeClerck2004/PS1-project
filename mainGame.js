@@ -156,6 +156,18 @@ function sellIngredients() {
   decreaseIngredient("salt-value");
   decreaseIngredient("sugar-value");
   decreaseIngredient("milk-value");
+
+  // Increase customers gained and left by 1
+  increaseCustomer("customersGained");
+  increaseCustomer("customersLeft");
+}
+
+// Function to increase the amount of customers gained and left
+function increaseCustomer(elementId) {
+  // Increase the quantity of the specified customer by 1 and update the HTML element
+  let currentValue = parseInt(document.getElementById(elementId).textContent);
+  let newValue = currentValue + 1;
+  document.getElementById(elementId).textContent = newValue;
 }
 
 // Function to handle baking products
