@@ -53,12 +53,12 @@
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Geld in kas: <span id="walletValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Geld in kas" data-bs-content="Verwijst naar het geld dat het bedrijf direct beschikbaar heeft voor dagelijkse <a href='#transactiesTitel'>transacties</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='#target-section'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Eigen vermogen" data-bs-content="Het <a href='#eigenvermogenTitel'>eigen vermogen</a> van een <a href='#ondernemingTitel'>onderneming</a> wordt berekend door de <a href='#schuldenTitel'>schulden</a> van de <a href='#activaTitel'>activa</a> af te trekken" data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
@@ -152,222 +152,493 @@
     </div>
 </div>
 
-<div class="container-fluid">
-
-</div>
-
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col-lg-12 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 id="balansTitel" class="card-title">Balans</h5>
-                    <p id="balansTekst" class="card-text">in economische termen verwijst naar het evenwicht tussen verschillende aspecten van de economie, zoals de handel, begroting, financiële markten, en vraag en aanbod. Het gaat om het streven naar stabiliteit en gelijkheid tussen verschillende economische variabelen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 id="assetsTitel" class="card-title">Assets</h5>
-                    <p id="assetsTekst" class="card-text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 id="liabilitiesTitel" class="card-title">Liabilities</h5>
-                    <p id="liabilitiesTekst" class="card-text"></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Inflatie</h5>
-                    <p class="card-text">De stijging van de algemene prijsniveaus van goederen en diensten in een economie gedurende een bepaalde periode, wat leidt tot de daling van de koopkracht van geld.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">BBP (Bruto Binnenlands Product)</h5>
-                    <p class="card-text">De totale waarde van alle goederen en diensten die binnen de grenzen van een land in een bepaalde periode worden geproduceerd.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Monopolie</h5>
-                    <p class="card-text">Een marktsituatie waarin een enkel bedrijf de controle heeft over de productie en verkoop van een goed of dienst, zonder significante concurrentie.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Monetaire beleid</h5>
-                    <p class="card-text">Het beleid van een centrale bank dat gericht is op het beheersen van de geldhoeveelheid en het renteniveau om economische doelstellingen te bereiken, zoals prijsstabiliteit en maximale werkgelegenheid.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Fiscaal beleid</h5>
-                    <p class="card-text">Het gebruik van overheidsuitgaven en belastingen om de economie te beïnvloeden, met als doel de economische groei te stimuleren, werkgelegenheid te bevorderen en inflatie te beheersen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Vraag en aanbod</h5>
-                    <p class="card-text">De relatie tussen de hoeveelheid van een goed of dienst die consumenten bereid zijn te kopen (vraag) en de hoeveelheid die producenten bereid zijn te verkopen (aanbod), beïnvloedt de prijs.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Arbeidsmarkt</h5>
-                    <p class="card-text">De markt waar werkgevers en werknemers elkaar ontmoeten en waar arbeid wordt gekocht en verkocht.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Marktfalen</h5>
-                    <p class="card-text">Situaties waarin de vrije markt niet efficiënt werkt, zoals bij monopolies, externe effecten en informatieasymmetrie.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Elasticiteit</h5>
-                    <p class="card-text">De mate waarin de vraag of het aanbod van een goed of dienst reageert op veranderingen in prijs, inkomen of andere variabelen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Werkloosheid</h5>
-                    <p class="card-text">Het aantal mensen dat actief op zoek is naar werk maar niet in staat is om werk te vinden.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Centrale bank</h5>
-                    <p class="card-text">Een instelling die verantwoordelijk is voor het beheer van het monetaire beleid en de uitgifte van valuta in een land.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Handelstekort</h5>
-                    <p class="card-text">Een situatie waarin de waarde van de import van een land groter is dan de waarde van de export, wat resulteert in een negatief saldo op de handelsbalans.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Handelsoverschot</h5>
-                    <p class="card-text">Een situatie waarin de waarde van de export van een land groter is dan de waarde van de import, wat resulteert in een positief saldo op de handelsbalans.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Rentetarief</h5>
-                    <p class="card-text">De kosten van het lenen van geld of de opbrengst van het uitlenen van geld, uitgedrukt als een percentage van het geleende bedrag.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Globalisering</h5>
-                    <p class="card-text">Het proces van toenemende economische integratie en interconnectie tussen landen, resulterend in een toename van internationale handel, investeringen en culturele uitwisseling.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Oligopolie</h5>
-                    <p class="card-text">Een marktsituatie waarin een klein aantal grote bedrijven de markt domineert en invloed heeft op prijzen en andere marktvariabelen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Concurrentie</h5>
-                    <p class="card-text">De rivaliteit tussen bedrijven bij het nastreven van klanten, marktaandeel en winst.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Economische groei</h5>
-                    <p class="card-text">De toename van het BBP van een land over een bepaalde periode, wat duidt op een toename van de productie en welvaart.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Deflatie</h5>
-                    <p class="card-text">Een aanhoudende daling van de algemene prijsniveaus van goederen en diensten in een economie, wat kan leiden tot een negatieve spiraal van verminderde consumptie en investeringen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Marktevenwicht</h5>
-                    <p class="card-text">De situatie waarin vraag en aanbod voor een goed of dienst in balans zijn, resulterend in een stabiele prijs.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Geldschepping</h5>
-                    <p class="card-text">Het proces waarbij nieuwe geldhoeveelheden worden gecreëerd door de centrale bank, meestal door middel van leningen aan commerciële banken.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Recessie</h5>
-                    <p class="card-text">Een periode van verminderde economische activiteit, gekenmerkt door een afname van het BBP, werkloosheid en een daling van de consumentenbestedingen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Keynesiaanse economie</h5>
-                    <p class="card-text">Een economische theorie die stelt dat de overheid actief moet ingrijpen in de economie om de vraag te stimuleren en recessies te bestrijden, vaak door middel van overheidsuitgaven en belastingen.</p>
+                    <h5 id="inflatieTitel" class="card-title">Inflatie</h5>
+                    <p id="inflatieTekst" class="card-text">Een algemene stijging van prijzen in een economie, waardoor geld minder waard wordt.</p>
                 </div>
             </div>
         </div>
 
-<script>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="vraagAanbodTitel" class="card-title">Vraag en aanbod</h5>
+                    <p id="vraagAanbodTekst" class="card-text">Het economische principe waarbij de prijs van een goed wordt bepaald door de interactie tussen de vraag van consumenten en het aanbod van producenten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="prijselasticiteitTitel" class="card-title">Prijselasticiteit</h5>
+                    <p id="prijselasticiteitTekst" class="card-text">De mate waarin de vraag naar een goed reageert op veranderingen in de prijs ervan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="monopolieTitel" class="card-title">Monopolie</h5>
+                    <p id="monopolieTekst" class="card-text">Een marktvorm waarbij één enkel bedrijf de volledige controle heeft over de verkoop van een product of dienst.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="concurrentieTitel" class="card-title">Concurrentie</h5>
+                    <p id="concurrentieTekst" class="card-text">De situatie waarin verschillende bedrijven strijden om marktaandeel door middel van prijs, kwaliteit en marketing.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="arbeidsmarktTitel" class="card-title">Arbeidsmarkt</h5>
+                    <p id="arbeidsmarktTekst" class="card-text">De plaats waar werkgevers en werknemers samenkomen om arbeidskrachten te kopen en verkopen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="bbpTitel" class="card-title">BBP (Bruto Binnenlands Product)</h5>
+                    <p id="bbpTekst" class="card-text">De totale waarde van alle goederen en diensten die in een land in een bepaalde periode worden geproduceerd, vaak gebruikt als een maatstaf voor economische prestaties.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="werkloosheidTitel" class="card-title">Werkloosheid</h5>
+                    <p id="werkloosheidTekst" class="card-text">Het percentage mensen dat actief op zoek is naar werk maar geen baan kan vinden.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="rentetariefTitel" class="card-title">Rentetarief</h5>
+                    <p id="rentetariefTekst" class="card-text">De prijs die wordt betaald voor het lenen van geld, uitgedrukt als een percentage van het geleende bedrag.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="schaarsteTitel" class="card-title">Schaarste</h5>
+                    <p id="schaarsteTekst" class="card-text">Een situatie waarin de middelen beperkt zijn in vergelijking met de behoeften en wensen van mensen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="belastingenTitel" class="card-title">Belastingen</h5>
+                    <p id="belastingenTekst" class="card-text">Verplichte betalingen aan de overheid om overheidsuitgaven te financieren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="budgetTitel" class="card-title">Budget</h5>
+                    <p id="budgetTekst" class="card-text">Een financieel plan dat aangeeft hoeveel geld beschikbaar is en hoe het zal worden besteed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="marktevenwichtTitel" class="card-title">Marktevenwicht</h5>
+                    <p id="marktevenwichtTekst" class="card-text">De situatie waarin vraag en aanbod in balans zijn, wat resulteert in een stabiele prijs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="importExportTitel" class="card-title">Import en export</h5>
+                    <p id="importExportTekst" class="card-text">Het kopen van goederen uit andere landen (import) en het verkopen van goederen aan andere landen (export).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="cpiTitel" class="card-title">Consumentenprijsindex (CPI)</h5>
+                    <p id="cpiTekst" class="card-text">Een maatstaf voor de gemiddelde verandering in prijzen van een vastgestelde mand van goederen en diensten die door consumenten worden gekocht.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="devaluatieTitel" class="card-title">Devaluatie</h5>
+                    <p id="devaluatieTekst" class="card-text">Een opzettelijke verlaging van de waarde van een munteenheid in verhouding tot andere valuta's.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="monetairBeleidTitel" class="card-title">Monetair beleid</h5>
+                    <p id="monetairBeleidTekst" class="card-text">Het beleid van een centrale bank met betrekking tot de geldhoeveelheid en de rentetarieven om economische doelstellingen te bereiken.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="fiscaalBeleidTitel" class="card-title">Fiscaal beleid</h5>
+                    <p id="fiscaalBeleidTekst" class="card-text">Het gebruik van belastingen en overheidsuitgaven om de economie te beïnvloeden.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="handelsovereenkomstTitel" class="card-title">Handelsovereenkomst</h5>
+                    <p id="handelsovereenkomstTekst" class="card-text">Een overeenkomst tussen landen om de handel te vergemakkelijken door het verminderen van tarieven en andere belemmeringen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="gelijkheidInkomenTitel" class="card-title">Gelijkheid van inkomen</h5>
+                    <p id="gelijkheidInkomenTekst" class="card-text">Een situatie waarin het inkomen eerlijk verdeeld is over de bevolking.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="kansarmoedeTitel" class="card-title">Kansarmoede</h5>
+                    <p id="kansarmoedeTekst" class="card-text">Een toestand waarin mensen niet kunnen voldoen aan hun basisbehoeften vanwege een gebrek aan economische kansen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="marginaleKostenTitel" class="card-title">Marginale kosten</h5>
+                    <p id="marginaleKostenTekst" class="card-text">De extra kosten die ontstaan door het produceren van één extra eenheid van een goed of dienst.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="marginaleOpbrengstTitel" class="card-title">Marginale opbrengst</h5>
+                    <p id="marginaleOpbrengstTekst" class="card-text">De extra opbrengst die wordt gegenereerd door de verkoop van één extra eenheid van een goed of dienst.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="microEconomieTitel" class="card-title">Micro-economie</h5>
+                    <p id="microEconomieTekst" class="card-text">De tak van de economie die zich bezighoudt met individuele markten en actoren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="macroEconomieTitel" class="card-title">Macro-economie</h5>
+                    <p id="macroEconomieTekst" class="card-text">De tak van de economie die zich bezighoudt met de algehele economische prestaties van een land of regio.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="arbeidsproductiviteitTitel" class="card-title">Arbeidsproductiviteit</h5>
+                    <p id="arbeidsproductiviteitTekst" class="card-text">De hoeveelheid goederen en diensten die een werknemer in een bepaalde periode kan produceren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="economischeGroeiTitel" class="card-title">Economische groei</h5>
+                    <p id="economischeGroeiTekst" class="card-text">Een toename van het BBP over een bepaalde periode.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="oligopolieTitel" class="card-title">Oligopolie</h5>
+                    <p id="oligopolieTekst" class="card-text">Een marktvorm waarbij slechts een paar bedrijven een groot deel van de markt controleren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="dumpingTitel" class="card-title">Dumping</h5>
+                    <p id="dumpingTekst" class="card-text">Het verkopen van goederen tegen een lagere prijs in een buitenlandse markt dan op de binnenlandse markt, vaak om concurrenten te verdringen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="giniTitel" class="card-title">Gini-coëfficiënt</h5>
+                    <p id="giniTekst" class="card-text">Een maatstaf voor inkomensongelijkheid binnen een bevolking.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="crowdfundingTitel" class="card-title">Crowdfunding</h5>
+                    <p id="crowdfundingTekst" class="card-text">Het verkrijgen van financiële steun van een grote groep mensen via online platformen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="aandelenmarktTitel" class="card-title">Aandelenmarkt</h5>
+                    <p id="aandelenmarktTekst" class="card-text">De markt waar aandelen van bedrijven worden verhandeld.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="obligatiemarktTitel" class="card-title">Obligatiemarkt</h5>
+                    <p id="obligatiemarktTekst" class="card-text">De markt waar obligaties worden verhandeld.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="liquiditeitTitel" class="card-title">Liquiditeit</h5>
+                    <p id="liquiditeitTekst" class="card-text">De mate waarin een activum snel kan worden omgezet in geld zonder significant verlies van waarde.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="kapitaalTitel" class="card-title">Kapitaal</h5>
+                    <p id="kapitaalTekst" class="card-text">Financiële activa of middelen die worden gebruikt om meer geld te verdienen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="dividendTitel" class="card-title">Dividend</h5>
+                    <p id="dividendTekst" class="card-text">Een deel van de winst van een bedrijf dat wordt uitgekeerd aan aandeelhouders.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="rentabiliteitTitel" class="card-title">Rentabiliteit</h5>
+                    <p id="rentabiliteitTekst" class="card-text">De mate waarin een investering winstgevend is.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="prijsdiscriminatieTitel" class="card-title">Prijsdiscriminatie</h5>
+                    <p id="prijsdiscriminatieTekst" class="card-text">Het aanrekenen van verschillende prijzen aan verschillende klanten voor hetzelfde goed of dienst.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="subsidieTitel" class="card-title">Subsidie</h5>
+                    <p id="subsidieTekst" class="card-text">Financiële steun van de overheid aan bedrijven of individuen om bepaalde activiteiten te bevorderen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="rentekoersTitel" class="card-title">Rentekoers</h5>
+                    <p id="rentekoersTekst" class="card-text">Het percentage dat een geldschieter ontvangt voor het uitlenen van geld, of dat een geldnemer betaalt om geld te lenen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="monopolistischeConcurrentieTitel" class="card-title">Monopolistische concurrentie</h5>
+                    <p id="monopolistischeConcurrentieTekst" class="card-text">Een marktvorm waarbij veel kleine bedrijven een product verkopen dat zich enigszins onderscheidt van producten van concurrenten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="economischeCrisisTitel" class="card-title">Economische crisis</h5>
+                    <p id="economischeCrisisTekst" class="card-text">Een ernstige neergang van de economische activiteit, gekenmerkt door een afname van het BBP, werkloosheid en faillissementen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="monetaireEenheidTitel" class="card-title">Monetaire eenheid</h5>
+                    <p id="monetaireEenheidTekst" class="card-text">Het officiële geld van een land, vaak uitgegeven door een centrale bank.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="productieTitel" class="card-title">Productie</h5>
+                    <p id="productieTekst" class="card-text">Het proces van het maken van goederen en diensten om aan de vraag van consumenten te voldoen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="investerenTitel" class="card-title">Investeren</h5>
+                    <p id="investerenTekst" class="card-text">Het besteden van geld aan activa of projecten met als doel toekomstige inkomsten of winst te genereren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="conglomeraatTitel" class="card-title">Conglomeraat</h5>
+                    <p id="conglomeraatTekst" class="card-text">Een bedrijf dat bestaat uit verschillende dochterondernemingen die actief zijn in verschillende sectoren.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="kartelTitel" class="card-title">Kartel</h5>
+                    <p id="kartelTekst" class="card-text">Een samenwerking tussen bedrijven om de concurrentie te beperken door prijzen te verhogen of productie te beperken.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="handelsbeleidTitel" class="card-title">Handelsbeleid</h5>
+                    <p id="handelsbeleidTekst" class="card-text">Het beleid van een overheid met betrekking tot de handel met andere landen, inclusief tarieven, quota en handelsovereenkomsten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="consumentenvertrouwenTitel" class="card-title">Consumentenvertrouwen</h5>
+                    <p id="consumentenvertrouwenTekst" class="card-text">Een indicator die de houding van consumenten ten opzichte van de economie meet, vaak gebruikt om toekomstige consumentenbestedingen te voorspellen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="activaTitel" class="card-title">Activa</h5>
+                    <p id="activaTekst" class="card-text">Activa zijn de bezittingen van een bedrijf, zoals geld, inventaris, onroerend goed en apparatuur. Activa vertegenwoordigen wat een bedrijf bezit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="passivaTitel" class="card-title">Passiva</h5>
+                    <p id="passivaTekst" class="card-text">Passiva zijn de verplichtingen of schulden van een bedrijf, zoals leningen, rekeningen die nog moeten worden betaald en andere financiële verplichtingen. Passiva vertegenwoordigen de financiële verplichtingen van een bedrijf.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="eigenvermogenTitel" class="card-title">Eigen vermogen</h5>
+                    <p id="eigenvermogenTekst" class="card-text">Passiva zijn de verplichtingen of schulden van een bedrijf, zoals leningen, rekeningen die nog moeten worden betaald en andere financiële verplichtingen. Passiva vertegenwoordigen de financiële verplichtingen van een bedrijf.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="schuldenTitel" class="card-title">Schulden</h5>
+                    <p id="schuldenTekst" class="card-text">Een financiële verplichting tegenover een ander, een geldbedrag dat men moet (terug)betalen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="ondernemingTitel" class="card-title">Onderneming</h5>
+                    <p id="ondernemingTekst" class="card-text">Een duurzame organisatie van arbeid en kapitaal dat door deelname aan het economisch verkeer beoogt winst te behalen</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="transactiesTitel" class="card-title">Transacties</h5>
+                    <p id="transactiesTekst" class="card-text">Een transactie verwijst over het algemeen naar een actie waarbij iets van waarde wordt uitgewisseld tussen twee partijen. Dit kan geld zijn, maar ook goederen, diensten, of zelfs informatie. Een transactie vindt meestal plaats wanneer beide partijen akkoord gaan met de voorwaarden van de uitwisseling.</p>
+                </div>
+            </div>
+        </div>
+        <script>
 function searchFunction() {
   var input, filter, cards, cardTitle, cardText, i, txtValue;
   input = document.getElementById('myInput');
@@ -393,7 +664,7 @@ function searchFunction() {
 </script>
 
     </div>
-    </div>
+</div>
 <!-- javascript -->
 <script src="../mainGame.js"></script>
 </body>
