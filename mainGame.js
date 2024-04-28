@@ -1,21 +1,16 @@
 <!-- ------------ main javascript ------------ -->
 
-// Get the roundsValue element
-var roundsValueElement = document.getElementById('roundsValue');
+$(document).ready(function() {
+    // Call retrieveAndUpdateValue for roundsValue to initialize on page load
+    retrieveAndUpdateValue('roundsValue');
 
-// Get the next round button
-var nextRoundButton = document.getElementById('nextRoundButton');
-
-// Add click event listener to the button
-nextRoundButton.addEventListener('click', function() {
-    // Get the current round value and parse it as an integer
-    var currentRound = parseInt(roundsValueElement.textContent);
-
-    // Increment the round value
-    var nextRound = currentRound + 1;
-
-    // Update the round value in the DOM
-    roundsValueElement.textContent = nextRound;
+    // Increment roundsValue and update when button is clicked
+    $('#nextRoundButton').click(function() {
+        let rounds = parseInt($('#roundsValue').text()); // Get current rounds value
+        rounds++; // Increment rounds
+        $('#roundsValue').text(rounds); // Update rounds value
+        updateAndStoreValue('roundsValue'); // Store updated rounds value
+    });
 });
 
 // Function to update and store value in localStorage
@@ -42,7 +37,6 @@ $(document).ready(function() {
     retrieveAndUpdateValue('walletValue');
     retrieveAndUpdateValue('totalAssetsValue');
     retrieveAndUpdateValue('totalCustomers')
-    retrieveAndUpdateValue('roundsValue')
 
     // Call additional functions as needed
 });
@@ -56,10 +50,6 @@ $(document).ready(function() {
     let customers = $('#totalCustomers').text(); // Get current wallet value
     $('#totalCustomers').text(customers); // Update wallet value
     updateAndStoreValue('totalCustomers'); // Store wallet value
-
-    let rounds = $('#roundsValue').text(); // Get current wallet value
-    $('#roundsValue').text(rounds); // Update wallet value
-    updateAndStoreValue('roundsValue'); // Store wallet value
 
 
     // Similarly update and store other values as needed
