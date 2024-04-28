@@ -1,5 +1,23 @@
 <!-- ------------ main javascript ------------ -->
 
+// Get the roundsValue element
+var roundsValueElement = document.getElementById('roundsValue');
+
+// Get the next round button
+var nextRoundButton = document.getElementById('nextRoundButton');
+
+// Add click event listener to the button
+nextRoundButton.addEventListener('click', function() {
+    // Get the current round value and parse it as an integer
+    var currentRound = parseInt(roundsValueElement.textContent);
+
+    // Increment the round value
+    var nextRound = currentRound + 1;
+
+    // Update the round value in the DOM
+    roundsValueElement.textContent = nextRound;
+});
+
 // Function to update and store value in localStorage
 function updateAndStoreValue(elementId) {
     // Get the value from the element
@@ -23,8 +41,8 @@ function retrieveAndUpdateValue(elementId) {
 $(document).ready(function() {
     retrieveAndUpdateValue('walletValue');
     retrieveAndUpdateValue('totalAssetsValue');
-    retrieveAndUpdateValue('roundsValue');
     retrieveAndUpdateValue('totalCustomers')
+    retrieveAndUpdateValue('roundsValue')
 
     // Call additional functions as needed
 });
@@ -38,6 +56,11 @@ $(document).ready(function() {
     let customers = $('#totalCustomers').text(); // Get current wallet value
     $('#totalCustomers').text(customers); // Update wallet value
     updateAndStoreValue('totalCustomers'); // Store wallet value
+
+    let rounds = $('#roundsValue').text(); // Get current wallet value
+    $('#roundsValue').text(rounds); // Update wallet value
+    updateAndStoreValue('roundsValue'); // Store wallet value
+
 
     // Similarly update and store other values as needed
 });
