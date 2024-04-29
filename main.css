@@ -54,3 +54,48 @@ a:hover {
 .zero {
   /* Add your styles for zero here */
 }
+
+.quotes {
+  .card-text {
+    opacity: 0; /* Begin met de tekst verborgen */
+    transition: opacity 0.5s; /* Voeg een overgang toe voor de opaciteit */
+
+  }
+
+  .card:hover {
+    transition-delay: 0.5s;
+    transition: opacity 0.5s; /* Voeg een overgang toe voor de opaciteit */
+  }
+
+  .glow-card {
+    transition: border-color 0.5s;
+    transition: background-color 1s;
+    transition: transform 0.5s;
+  }
+
+  .glow-card:hover {
+
+    border-color: rgba(25, 135, 84, 0.5); /* Pas de gloeiende border-color toe bij hover */
+    /*background-color: rgba(25, 135, 84, 12.5%);*/
+    /*display: block;*/
+
+    transform: scale(102%);
+    /*opacity: 1;*/
+
+
+  }
+
+  .hendrikJanNaam {
+    opacity: 0; /* Begin met de naam verborgen */
+    transition: opacity 0.5s ease 1s; /* Voeg een overgang toe voor de opaciteit met een vertraging van 1 seconde */
+  }
+
+  .glow-card:hover .hendrikJanNaam {
+    opacity: 1; /* Laat de naam zien wanneer erover wordt gehovert */
+  }
+
+  .card:hover .card-text {
+    opacity: 1; /* Laat de tekst zien wanneer erover wordt gehovert */
+  }
+
+}
