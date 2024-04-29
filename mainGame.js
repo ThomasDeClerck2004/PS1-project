@@ -1,16 +1,16 @@
 // <!-- ------------ main javascript ------------ -->
 
-$(document).ready(function() {
-    // Call retrieveAndUpdateValue for roundsValue to initialize on page load
-    retrieveAndUpdateValue('roundsValue');
+$(document).ready(function () {
+  // Call retrieveAndUpdateValue for roundsValue to initialize on page load
+  retrieveAndUpdateValue("roundsValue");
 
-    // Increment roundsValue and update when button is clicked
-    $('#nextRoundButton').click(function() {
-        let rounds = parseInt($('#roundsValue').text()); // Get current rounds value
-        rounds++; // Increment rounds
-        $('#roundsValue').text(rounds); // Update rounds value
-        updateAndStoreValue('roundsValue'); // Store updated rounds value
-    });
+  // Increment roundsValue and update when button is clicked
+  $("#nextRoundButton").click(function () {
+    let rounds = parseInt($("#roundsValue").text()); // Get current rounds value
+    rounds++; // Increment rounds
+    $("#roundsValue").text(rounds); // Update rounds value
+    updateAndStoreValue("roundsValue"); // Store updated rounds value
+  });
 });
 
 // Function to update and store value in localStorage
@@ -33,10 +33,10 @@ function retrieveAndUpdateValue(elementId) {
   }
 }
 // Call retrieveAndUpdateValue for each element you want to initialize on page load
-$(document).ready(function() {
-    retrieveAndUpdateValue('walletValue');
-    retrieveAndUpdateValue('totalAssetsValue');
-    retrieveAndUpdateValue('totalCustomers')
+$(document).ready(function () {
+  retrieveAndUpdateValue("walletValue");
+  retrieveAndUpdateValue("totalAssetsValue");
+  retrieveAndUpdateValue("totalCustomers");
 
   // Call additional functions as needed
 });
@@ -47,13 +47,11 @@ $(document).ready(function () {
   $("#walletValue").text(wallet); // Update wallet value
   updateAndStoreValue("walletValue"); // Store wallet value
 
+  let customers = $("#totalCustomers").text(); // Get current wallet value
+  $("#totalCustomers").text(customers); // Update wallet value
+  updateAndStoreValue("totalCustomers"); // Store wallet value
 
-    let customers = $('#totalCustomers').text(); // Get current wallet value
-    $('#totalCustomers').text(customers); // Update wallet value
-    updateAndStoreValue('totalCustomers'); // Store wallet value
-
-
-    // Similarly update and store other values as needed
+  // Similarly update and store other values as needed
 });
 
 // number script
@@ -157,8 +155,17 @@ document
   .getElementById("ingredients-button")
   .addEventListener("click", showIngredientsModal);
 
+let isFirstBuy = true; // Flag to check if it's the first time buying ingredients
+
 // Function to handle buying ingredients
 function buyIngredients() {
+  // Check if it's the first time buying ingredients
+  if (isFirstBuy) {
+    // Show the Bootstrap modal
+    $("#firstBuyModal").modal("show");
+    isFirstBuy = false; // Set the flag to false to indicate it's not the first time anymore
+  }
+
   // Increase quantity of various ingredients
   increaseIngredient("flour-value");
   increaseIngredient("salt-value");
@@ -168,6 +175,18 @@ function buyIngredients() {
 
 // Function to handle selling products and decreasing ingredients
 function sellIngredients() {
+  // Check if there is bread and pastry left
+  let breadLeft = parseInt(document.getElementById("bread-value").textContent);
+  let pastryLeft = parseInt(
+    document.getElementById("pastry-value").textContent
+  );
+
+  if (breadLeft === 0 && pastryLeft === 0) {
+    // Show Bootstrap modal if there is no bread and pastry left
+    $("#noProductsModal").modal("show");
+    return;
+  }
+
   // Sell random amounts of pastry and bread, then decrease ingredient quantities
   sellRandomAmount("pastry-value");
   sellRandomAmount("bread-value");
@@ -274,4 +293,10 @@ function sellRandomAmount(elementId) {
     document.getElementById(elementId).textContent = newValue;
     updateAndStoreValue(elementId, newValue);
   }
+}
+
+// Function to update and store values in localStorage
+function updateAndStoreValue(elementId, value) {
+  // Update and store the value of the specified element in localStorage
+  localStorage.setItem(elementId, value);
 }
