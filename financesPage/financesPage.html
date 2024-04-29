@@ -25,14 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Dashboard links -->
-    <link rel="stylesheet" href="./dashboard.css">
-    <script src="./dashboard.js"></script>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
-
     <!--Your own links-->
     <link rel="stylesheet" href="../main.css">
-    <script src="../mainGame.js"></script>
 </head>
 
 <body>
@@ -41,7 +35,7 @@
         <div class="col-md-8 p-0">
             <nav class="navbar bg-body-tertiary border-style">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="color: white; padding-right: 15px;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <i class="bi bi-globe2" style="color: white;"></i>
                     </button>
 
@@ -100,16 +94,16 @@
                                     <a class="nav-link" href="../mainGamePage/mainGame.html">Start</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../infentoryPage/infentoryPage.html">Voorraad</a>
+                                    <a class="nav-link" href="#">Voorraad</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./graphTemporary.html">Grafieken</a>
+                                    <a class="nav-link" href="../graphPage/graphTemporary.html">Grafieken</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../financesPage/financesPage.html">Financiën</a>
+                                    <a class="nav-link" href="./financesPage.html">Financiën</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -131,169 +125,135 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-6 px-4">
-            <h1>test</h1>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-        </div>
+<main>
+    <div class="container-fluid">
+        <div class="row m-5">
+            <div class="col-12 themed-grid-col">
+                <div class="border rounded shadow-sm">
+                    <h2 class="text-center border-bottom rounded py-3">Boekhouding<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
+                    <div class="p-4">
+                        <div class="row">
+                            <div class="col pe-5">
+                                <h5>Vaste activa</h5>
+                            </div>
+                            <div class="col ps-5">
+                                <h5>Eigen vermogen</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Bedrijfsruimte
+                                <span id="bedrijfsruimte" style="display: inline-block; float: right">200.000€</span>
+                            </div>
+                            <div class="col ps-5">
+                                Eigen vermogen
+                                <span id="eigenVermogen" style="display: inline-block; float: right">100.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Bedrijfswagen
+                                <span id="bedrijfswagen" style="display: inline-block; float: right">60.000€</span>
+                            </div>
+                            <div class="col ps-5">
+                                Reserves
+                                <span id="reserves" style="display: inline-block; float: right">35.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Inventaris
+                                <span id="inventaris" style="display: inline-block; float: right">75.000€</span>
+                            </div>
+                            <div class="col ps-5">
 
-        <main class="col-6 px-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+
+                            </div>
+                            <div class="col ps-5">
+                                <h5>Lang vreemd vermogen</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                <h5>Vlottende activa</h5>
+                            </div>
+                            <div class="col ps-5">
+                                Hypotheek bedrijfsruimte
+                                <span id="HypotheekBedrijfsruimte" style="display: inline-block; float: right">150.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Voorraad
+                                <span id="Voorraad" style="display: inline-block; float: right">100.000€</span>
+                            </div>
+                            <div class="col ps-5">
+                                Onderhandse lening
+                                <span id="OnderhandseLening" style="display: inline-block; float: right">75.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Debiteuren
+                                <span id="Debiteuren" style="display: inline-block; float: right">85.000€</span>
+                            </div>
+                            <div class="col ps-5">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                Liquide middelen
+                                <span id="LiquideMiddelen" style="display: inline-block; float: right">15.000€</span>
+                            </div>
+                            <div class="col ps-5">
+                                <h5>Kort vreemd vermogen</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+
+                            </div>
+                            <div class="col ps-5">
+                                Crediteuren
+                                <span id="Crediteuren" style="display: inline-block; float: right">100.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+
+                            </div>
+                            <div class="col ps-5">
+                                Rekening courant Triodos
+                                <span id="Rekening courant" style="display: inline-block; float: right">75.000€</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                <p></p>
+                            </div>
+                            <div class="col ps-5">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col pe-5">
+                                <h5>Totaal activa                                 <span id="TotaalActiva" style="display: inline-block; float: right">535.000€</span></h5>
+                            </div>
+                            <div class="col ps-5">
+                                <h5>Totaal passiva                                 <span id="TotaalPassiva" style="display: inline-block; float: right">535.000€</span></h5>
+                            </div>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
-                        <svg class="bi"><use xlink:href="#calendar3"></use></svg>
-                        This week
-                    </button>
                 </div>
             </div>
-
-            <canvas class="my-4 w-100" id="myChart" width="3099" height="1308" style="display: block; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
-
-            <h2 class="text-center">Sprints</h2>
-            <div class="table-responsive small">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>text</td>
-                        <td>random</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>placeholder</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>irrelevant</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>visual</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>random</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>text</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+        </div>
     </div>
-</div>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
-
+</main>
 <script src="../mainGame.js"></script>
 </body>
 

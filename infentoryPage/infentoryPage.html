@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PS1-project</title>
-    <meta name="author" content="Thomas De Clerck" />
+    <meta name="author" content="O-reo" />
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 
     <!-- Bootstrap CSS -->
@@ -43,12 +43,12 @@
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Geld in kas: <span id="walletValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="This is the <a href='#target-section'>budget</a> you can use now to make <a href='#target-section'>transactions</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Geld in kas" data-bs-content="Verwijst naar het geld dat het bedrijf direct beschikbaar heeft voor dagelijkse <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>transacties</a>." data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">
                         Eigen vermogen: <span id="totalAssetsValue">0€</span>
-                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Total Assets Information" data-bs-content="The <a href='../economicTermsPage/economicTerms.html'>balance</a> of the <a href='#target-section'>assets</a> and <a href='#target-section'>liabilities</a> of your own business or organization." data-bs-html="true" style="top: 0; right: -15px;"></i>
+                        <i class="bi bi-info-circle" data-bs-toggle="popover" title="Eigen vermogen" data-bs-content="Het <a href='../economicTermsPage/economicTerms.html#eigenvermogenTitel'>eigen vermogen</a> van een <a href='../economicTermsPage/economicTerms.html#ondernemingTitel'>onderneming</a> wordt berekend door de <a href='../economicTermsPage/economicTerms.html#schuldenTitel'>schulden</a> van de <a href='../economicTermsPage/economicTerms.html#activaTitel'>activa</a> af te trekken" data-bs-html="true" style="top: 0; right: -15px;"></i>
                     </span>
 
                     <span class="navbar-text" style="font-weight: bold; color: white;">Ronde <span id="roundsValue">0</span></span>
@@ -103,10 +103,7 @@
                                     <a class="nav-link" href="../shopPage/shopPage.html">Winkels</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Financiën</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Verkopen</a>
+                                    <a class="nav-link" href="../financesPage/financesPage.html">Financiën</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../economicTermsPage/economicTerms.html">Economische termen</a>
@@ -123,7 +120,7 @@
             </nav>
         </div>
         <div class="col-md-4 d-flex justify-content-end align-items-center">
-            <button type="button" class="btn btn-outline-success">Volgende ronde</button>
+            <button id="nextRoundButton" type="button" class="btn btn-outline-success">Volgende ronde</button>
         </div>
     </div>
 </div>
@@ -133,14 +130,36 @@
         <div class="row m-5">
             <div class="col-12 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Market<i class="bi bi-info-circle" data-bs-toggle="popover" title="Wallet Information" data-bs-content="T" data-bs-html="true"></i></h2>
-                    <div class="p-4">
+                    <h2 class="text-center border-bottom rounded py-3">Voorraad<i class="bi bi-info-circle" data-bs-toggle="popover" title="Voorraad" data-bs-content="Hier kan je de voorraad beheren van uw bedrijf" data-bs-html="true"></i></h2>
+                    <div class="pt-4 px-4">
                         <div class="row mb-3 text-center">
-                            <div class="col-6 themed-grid-col">
-                                <button type="button" class="btn btn-outline-success">Buy</button>
+                            <div class="col-10 themed-grid-col" style="display: flex; justify-content: space-between;">
+                                <h4 style="flex-basis: 25%;">Product</h4>
+                                <h4 style="flex-basis: 25%;">Amount</h4>
+                                <h4 style="flex-basis: 25%;">Price</h4>
                             </div>
-                            <div class="col-6 themed-grid-col">
-                                <button type="button" class="btn btn-outline-success">Sell</button>
+
+                            <div class="col-10 themed-grid-col mt-3" style="display: flex; justify-content: space-between;">
+                                <h6 style="flex-basis: 25%;"><i class="fa-solid fa-cake-candles"></i> Gebakje</h6>
+                                <h6 style="flex-basis: 25%;">10</h6>
+                                <h6 style="flex-basis: 25%;">3,50€</h6>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <button type="button" class="btn btn-outline-success">Buy</button>
+                                <button type="button" class="btn btn-outline-danger">Sell</button>
+                            </div>
+
+                            <div class="col-10 themed-grid-col mt-3" style="display: flex; justify-content: space-between;">
+                                <h6 style="flex-basis: 25%;"><i class="fa-solid fa-bread-slice"></i> Brood</h6>
+                                <h6 style="flex-basis: 25%;">50</h6>
+                                <h6 style="flex-basis: 25%;">2,50€</h6>
+                            </div>
+                            <div class="col-2 mt-3">
+                                <button type="button" class="btn btn-outline-success">Buy</button>
+                                <button type="button" class="btn btn-outline-danger">Sell</button>
+                            </div>
+                            <div class="d-flex justify-content-start">
+                                <button type="button" class="btn btn-outline-success">Add product</button>
                             </div>
                         </div>
                     </div>

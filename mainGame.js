@@ -1,5 +1,18 @@
 // <!-- ------------ main javascript ------------ -->
 
+$(document).ready(function() {
+    // Call retrieveAndUpdateValue for roundsValue to initialize on page load
+    retrieveAndUpdateValue('roundsValue');
+
+    // Increment roundsValue and update when button is clicked
+    $('#nextRoundButton').click(function() {
+        let rounds = parseInt($('#roundsValue').text()); // Get current rounds value
+        rounds++; // Increment rounds
+        $('#roundsValue').text(rounds); // Update rounds value
+        updateAndStoreValue('roundsValue'); // Store updated rounds value
+    });
+});
+
 // Function to update and store value in localStorage
 function updateAndStoreValue(elementId) {
   // Get the value from the element
@@ -20,10 +33,10 @@ function retrieveAndUpdateValue(elementId) {
   }
 }
 // Call retrieveAndUpdateValue for each element you want to initialize on page load
-$(document).ready(function () {
-  retrieveAndUpdateValue("walletValue");
-  retrieveAndUpdateValue("totalAssetsValue");
-  retrieveAndUpdateValue("roundsValue");
+$(document).ready(function() {
+    retrieveAndUpdateValue('walletValue');
+    retrieveAndUpdateValue('totalAssetsValue');
+    retrieveAndUpdateValue('totalCustomers')
 
   // Call additional functions as needed
 });
@@ -34,7 +47,13 @@ $(document).ready(function () {
   $("#walletValue").text(wallet); // Update wallet value
   updateAndStoreValue("walletValue"); // Store wallet value
 
-  // Similarly update and store other values as needed
+
+    let customers = $('#totalCustomers').text(); // Get current wallet value
+    $('#totalCustomers').text(customers); // Update wallet value
+    updateAndStoreValue('totalCustomers'); // Store wallet value
+
+
+    // Similarly update and store other values as needed
 });
 
 // number script
