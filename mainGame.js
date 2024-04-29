@@ -275,9 +275,3 @@ function sellRandomAmount(elementId) {
     updateAndStoreValue(elementId, newValue);
   }
 }
-
-// Function to update and store values in localStorage
-function updateAndStoreValue(elementId, value) {
-  // Update and store the value of the specified element in localStorage
-  localStorage.setItem(elementId, value);
-}
