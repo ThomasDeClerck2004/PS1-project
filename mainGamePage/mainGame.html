@@ -227,7 +227,7 @@
 
             <div class="col-6 col-lg-4 themed-grid-col">
                 <div class="border rounded shadow-sm">
-                    <h2 class="text-center border-bottom rounded py-3">Klantinformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Klantinformatie" data-bs-content="Hier kun je zien hoeveel klanten je hebt, hoeveel er lid zijn geworden en hoeveel er zijn vertrokken. Het is belangrijk om dit getal positief te houden voor een gerichte <a href='../economicTermsPage/economicTerms.html#omzetTitel'>omzet</a>." data-bs-html="true"></i></h2>
+                    <h2 class="text-center border-bottom rounded py-3">Klantinformatie<i class="bi bi-info-circle" data-bs-toggle="popover" title="Bakker" data-bs-content="Hier kan je jouw producten maken" data-bs-html="true"></i></h2>
                     <div class="p-4">
                         <p>Klanten gewonnen: <span id="customersGained" style="display: inline-block; float: right;">0</span></p>
                         <p>Klanten vertrokken: <span id="customersLeft" style="display: inline-block; float: right;">0</span></p>
@@ -242,7 +242,7 @@
           <div class="col-12 themed-grid-col">
             <div class="border rounded shadow-sm">
               <h2 class="text-center border-bottom rounded py-3">
-                Market<i
+                Bakker<i
                   class="bi bi-info-circle"
                   data-bs-toggle="popover"
                   title="Wallet Information"
@@ -252,7 +252,7 @@
               </h2>
               <div class="p-4">
                 <p>
-                  Pastry:
+                  Gebakjes:
                   <span
                     id="pastry-value"
                     style="display: inline-block; float: right"
@@ -260,7 +260,7 @@
                   >
                 </p>
                 <p>
-                  Bread:
+                  Brood:
                   <span
                     id="bread-value"
                     style="display: inline-block; float: right"
@@ -276,7 +276,7 @@
                       type="button"
                       class="btn btn-outline-success"
                     >
-                      Buy Ingredients
+                        Ingrediënt kopen
                     </button>
                   </div>
                   <div class="col-3 themed-grid-col">
@@ -285,7 +285,7 @@
                       type="button"
                       class="btn btn-outline-success"
                     >
-                      Sell bread and Pastry
+                        Brood en gebak verkopen
                     </button>
                   </div>
                   <div class="col-3 themed-grid-col">
@@ -294,7 +294,7 @@
                       type="button"
                       class="btn btn-outline-success"
                     >
-                      Bake Bread and Pastry
+                        Brood en gebak bakken
                     </button>
                   </div>
                   <div class="col-3 themed-grid-col">
@@ -305,7 +305,7 @@
                       data-bs-toggle="modal"
                       data-bs-target="#ingredientsModal"
                     >
-                      Ingredients
+                        Ingrediënten
                     </button>
                   </div>
                 </div>
@@ -327,7 +327,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="ingredientsModalLabel">
-                Ingredients
+                  Ingrediënten
               </h5>
               <button
                 type="button"
@@ -340,18 +340,18 @@
             </div>
             <div class="modal-body">
               <p>
-                <i class="fas fa-flour"></i> Flour:
+                <i class="fas fa-flour"></i> Bloem:
                 <span id="flour-value">0</span>
               </p>
               <p>
-                <i class="fas fa-salt"></i> Salt: <span id="salt-value">0</span>
+                <i class="fas fa-salt"></i> Zout: <span id="salt-value">0</span>
               </p>
               <p>
-                <i class="fas fa-sugar"></i> Sugar:
+                <i class="fas fa-sugar"></i> Suiker:
                 <span id="sugar-value">0</span>
               </p>
               <p>
-                <i class="fas fa-glass-milk"></i> Milk:
+                <i class="fas fa-glass-milk"></i> Melk:
                 <span id="milk-value">0</span>
               </p>
             </div>
@@ -365,34 +365,33 @@
         aria-labelledby="notEnoughIngredientsModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="notEnoughIngredientsModalLabel">
-                Not Enough Ingredients!
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              Please make sure you have at least 2 units of each ingredient
-              before baking.
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                OK
-              </button>
-            </div>
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="notEnoughIngredientsModalLabel">
+                          Niet Genoeg Ingrediënten!
+                      </h5>
+                      <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Sluiten"
+                      ></button>
+                  </div>
+                  <div class="modal-body">
+                      Zorg ervoor dat je minstens 2 eenheden van elk ingrediënt hebt voordat je gaat bakken.
+                  </div>
+                  <div class="modal-footer">
+                      <button
+                              type="button"
+                              class="btn btn-primary"
+                              data-bs-dismiss="modal"
+                      >
+                          OK
+                      </button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
       <div
         class="modal fade"
@@ -401,33 +400,33 @@
         aria-labelledby="notEnoughProductsModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="notEnoughProductsModalLabel">
-                Not Enough Products!
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              You do not have enough pastries or bread to sell.
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-              >
-                OK
-              </button>
-            </div>
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="notEnoughProductsModalLabel">
+                          Niet Genoeg Producten!
+                      </h5>
+                      <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Sluiten"
+                      ></button>
+                  </div>
+                  <div class="modal-body">
+                      Je hebt niet genoeg gebakjes of brood om te verkopen.
+                  </div>
+                  <div class="modal-footer">
+                      <button
+                              type="button"
+                              class="btn btn-primary"
+                              data-bs-dismiss="modal"
+                      >
+                          OK
+                      </button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
     </main>
     <script src="../mainGame.js"></script>
