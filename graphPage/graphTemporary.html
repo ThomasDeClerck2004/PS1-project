@@ -134,22 +134,25 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-6 px-4">
-            <h1>test</h1>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
-            <p>lalalalaal</p>
+            <h1>Filter</h1>
+            <hr>
+            <br>
+            <div class="">
+                <!--            <div class="col-md-6 d-flex justify-content-between align-items-spacing  mb-6">-->
+                <button type="button" class="btn btn-outline-success" id="vraag&aanbod">Vraag & aanbod</button>
+                <button type="button" class="btn btn-outline-success" id="forecasting">forecasten</button>
+                <button type="button" class="btn btn-outline-success" id="winstBtn">winst</button>
+                <button type="button" class="btn btn-outline-success" id="verliesBtn">verlies</button>
+                <button type="button" class="btn btn-outline-success" id="klanten">klanten</button>
+            </div>
+
         </div>
 
-        <main class="col-6 px-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
+        <main class=" px-4">
+            <div class=" justify-content-between  flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="text-center">Dashboard</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                    </div>
+
                     <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
                         <svg class="bi"><use xlink:href="#calendar3"></use></svg>
                         This week
@@ -157,7 +160,33 @@
                 </div>
             </div>
 
-            <canvas class="my-4 w-100" id="myChart" width="3099" height="1308" style="display: block; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
+
+            <div>
+                <div>
+                    <h2>Vraag & Aanbod</h2>
+                    <hr>
+                    <canvas class="my-4 w-100" id="myChart4" width="3099" height="1308" style="display: none; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
+                </div>
+
+                <div>
+                    <h2>Forecasten</h2>
+                    <hr>
+                    <canvas class="my-4 w-100" id="myChart3" width="3099" height="1308" style="display: none; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
+                </div>
+
+                <div>
+                    <h2>Winst</h2>
+                    <!--                    <button type="button" class="btn btn-outline-success btn-right" id="winstBtn">winst</button>-->
+                    <hr>
+                    <canvas class="my-4 w-100" id="myChart" width="3099" height="1308" style="display: none; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
+                </div>
+
+                <div>
+                    <h2>Verlies</h2>
+                    <hr>
+                    <canvas class="my-4 w-100" id="myChart2" width="3099" height="1308" style="display: none; box-sizing: border-box; height: 654px; width: 1549px;"></canvas>
+                </div>
+            </div>
 
             <h2 class="text-center">Sprints</h2>
             <div class="table-responsive small">
@@ -165,136 +194,275 @@
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
-                        <th scope="col">Header</th>
+                        <th scope="col">Turn 1</th>
+                        <th scope="col">Turn 2</th>
+                        <th scope="col">Turn 3</th>
+                        <th scope="col">Turn 4</th>
+                        <th scope="col">Turn 5</th>
+                        <th scope="col">Turn 6</th>
+                        <th scope="col">Turn 7</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
+                        <th>Kas</th>
+                        <td id="turn1Kas"></td>
+                        <td id="turn2Kas"></td>
+                        <td id="turn3Kas"></td>
+                        <td id="turn4Kas"></td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
                     </tr>
                     <tr>
-                        <td>1,002</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
+                        <th>Winst</th>
+                        <td>0</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
                     </tr>
                     <tr>
-                        <td>1,003</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
+                        <th>Verlies</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
                     </tr>
                     <tr>
-                        <td>1,003</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
+                        <th>Forecasten</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+
                     </tr>
                     <tr>
-                        <td>1,004</td>
-                        <td>text</td>
-                        <td>random</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
+                        <th>Vraag & Aanbod</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>                    </tr>
                     <tr>
-                        <td>1,005</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>placeholder</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>irrelevant</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>placeholder</td>
-                        <td>irrelevant</td>
-                        <td>visual</td>
-                        <td>layout</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>data</td>
-                        <td>rich</td>
-                        <td>dashboard</td>
-                        <td>tabular</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>information</td>
-                        <td>placeholder</td>
-                        <td>illustrative</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>text</td>
-                        <td>placeholder</td>
-                        <td>layout</td>
-                        <td>dashboard</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>dashboard</td>
-                        <td>irrelevant</td>
-                        <td>text</td>
-                        <td>visual</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>dashboard</td>
-                        <td>illustrative</td>
-                        <td>rich</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>random</td>
-                        <td>tabular</td>
-                        <td>information</td>
-                        <td>text</td>
-                    </tr>
+                        <th>Klanten</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>                    </tr>
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>                    </tr>-->
+                    <!--                    <tr>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                        <td>...</td>-->
+                    <!--                    </tr>-->
                     </tbody>
                 </table>
             </div>
         </main>
     </div>
 </div>
+
+<script src="./dashboard.js"></script>
+
+
+<script>
+    document.getElementById("turn1Kas").innerText = kas[0];
+    document.getElementById("turn2Kas").innerText = kas[1];
+    document.getElementById("turn3Kas").innerText = kas[2];
+    document.getElementById("turn4Kas").innerText = kas[3];
+    document.getElementById("turn5Kas").innerText = kas[4];
+</script>
+
+<script>
+    // var winstData = [10, 20, 30, 40, 50];
+    // var verliesData = [50, 40, 30, 20, 10];
+    var chartVisible = false;
+
+    function toggleChartVisibilityWinst() {
+        var canvas = document.getElementById('myChart');
+        if (chartVisible) {
+            canvas.style.display = 'none'; // Verberg de grafiek
+        } else {
+            canvas.style.display = 'block'; // Toon de grafiek
+        }
+        chartVisible = !chartVisible; // Wissel de zichtbaarheidsstatus
+    }
+    function toggleChartVisibilityVerlies() {
+        var canvas = document.getElementById('myChart2');
+        if (chartVisible) {
+            canvas.style.display = 'none'; // Verberg de grafiek
+        } else {
+            canvas.style.display = 'block'; // Toon de grafiek
+        }
+        chartVisible = !chartVisible; // Wissel de zichtbaarheidsstatus
+    }
+    function toggleChartVisibilityForecasten() {
+        var canvas = document.getElementById('myChart3');
+        if (chartVisible) {
+            canvas.style.display = 'none'; // Verberg de grafiek
+        } else {
+            canvas.style.display = 'block'; // Toon de grafiek
+        }
+        chartVisible = !chartVisible; // Wissel de zichtbaarheidsstatus
+    }
+    function toggleChartVisibilityVraagEnAanbod() {
+        var canvas = document.getElementById('myChart4');
+        if (chartVisible) {
+            canvas.style.display = 'none'; // Verberg de grafiek
+        } else {
+            canvas.style.display = 'block'; // Toon de grafiek
+        }
+        chartVisible = !chartVisible; // Wissel de zichtbaarheidsstatus
+    }
+
+    // function updateChart(data) {
+    //     var ctx = document.getElementById('myChart').getContext('2d');
+    //     var myChart = new Chart(ctx, {
+    //         type: 'line',
+    //         data: {
+    //             labels: ['1', '2', '3', '4', '5'],
+    //             datasets: [{
+    //                 label: 'Data',
+    //                 data: data,
+    //                 borderColor: 'rgb(75, 192, 192)',
+    //                 tension: 0.1
+    //             }]
+    //         },
+    //         options: {}
+    //     });
+    // }
+
+    document.getElementById('winstBtn').addEventListener('click', function() {
+        toggleChartVisibilityWinst(); // Verberg/Toon de grafiek wanneer op de knop wordt geklikt
+    });
+
+    document.getElementById('verliesBtn').addEventListener('click', function() {
+        toggleChartVisibilityVerlies(); // Verberg/Toon de grafiek wanneer op de knop wordt geklikt
+        // if (chartVisible) {
+        //     updateChart(verliesData); // Update de grafiek als hij zichtbaar is
+        // }
+    });
+
+    document.getElementById('forecasting').addEventListener('click', function() {
+        toggleChartVisibilityForecasten(); // Verberg/Toon de grafiek wanneer op de knop wordt geklikt
+        // if (chartVisible) {
+        //     updateChart(verliesData); // Update de grafiek als hij zichtbaar is
+        // }
+    });
+
+    document.getElementById('vraag&aanbod').addEventListener('click', function() {
+        toggleChartVisibilityVraagEnAanbod(); // Verberg/Toon de grafiek wanneer op de knop wordt geklikt
+        // if (chartVisible) {
+        //     updateChart(verliesData); // Update de grafiek als hij zichtbaar is
+        // }
+    });
+</script>
+
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
 
 <script src="../mainGame.js"></script>
+
 </body>
 
 </html>
